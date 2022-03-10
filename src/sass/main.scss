@@ -1,28 +1,41 @@
-/* variables and mixins */
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-
-/* base and typography */
+@import 'abstracts/_colors';
+@import 'base/_typography';
 @import 'base/reset';
-@import 'base/typography';
 
-/* Layout */
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
+html {
+    background: $DarkPageBackgroundColor;
+    color: $DarkTextColor;
+    @include font;
+}
 
-/* components */
-@import 'components/buttons';
-@import 'components/cover';
-@import 'components/dropdown';
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 600;
+}
 
-/* pages */
-@import 'pages/home';
-@import 'pages/contact';
+h1 {
+    font-size: 2em;
+}
 
-/* themes */
-@import 'themes/theme';
-@import 'themes/admin';
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.17em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: .83em;
+}
+
+h6 {
+    font-size: .67em;
+}
+
+p {
+    font-size: 16px;
+}
