@@ -1,0 +1,39 @@
+// Global
+$Gradient_1: linear-gradient(
+      80deg, 
+      #9358F7, 
+      #7B78F2, 
+      #6197EE, 
+      #45B5E9, 
+      #10D7E2, 
+    );
+$Gradient_2: linear-gradient(
+      80deg, 
+      #21BDB8, 
+      #280684,
+    );
+$Invisible: rgba(0,0,0,0);
+
+// Bright Mode
+$Accent: #1D65F7;
+$Accent_Contrast: #F6F6F6;
+$AlertColor: #EA1010;
+$LogoColor: #212121;
+$TextColor: #212121;
+$SloganColor: rgba(33, 33, 33, .75);
+$PageBackgroundColor: #F6F6F6;
+$ContainerBackgroundColor: #FFF;
+$SidebarBackgroundColor: #FFF;
+$TagsColor: #F1F1F1;
+
+// Dark Mode
+$Accent: #3577FF;
+$Accent_Contrast: #F7FAFC;
+$AlertColor: #EF5D5D;
+$LogoColor: #CBD6E3;
+$TextColor: #CBD6E3;
+$SloganColor: #AFBFD2;
+$PageBackgroundColor: #0B1622;
+$ContainerBackgroundColor: #171E2E;
+$SidebarBackgroundColor: #171E2E;
+$TagsColor: #4C76EA;
