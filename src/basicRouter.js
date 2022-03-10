@@ -10,6 +10,7 @@ import Profile from "./components/Profile";
 import Registration from "./components/Registration";
 import Settings from "./components/Settings";
 import Sidebar from "./components/Sidebar";
+import MyRequsts from "./components/MyRequsts";
 
 export default function basicRouting() {
   return (
