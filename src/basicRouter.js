@@ -1,6 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
+import Catalogue from "./components/Catalogue";
+import Dashboard from "./components/Dashboard";
+import FindUser from "./components/FindUser";
+import Login from "./components/Login";
+import Inbox from "./components/Inbox";
+import Profile from "./components/Profile";
+import Registration from "./components/Registration";
+import Settings from "./components/Settings";
+import Sidebar from "./components/Sidebar";
+
 export default function basicRouting() {
   return (
     <Router>
