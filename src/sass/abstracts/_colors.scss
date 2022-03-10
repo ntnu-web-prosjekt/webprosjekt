@@ -1,39 +1,35 @@
 // Global
 $Gradient_1: linear-gradient(
-      80deg, 
-      #9358F7, 
-      #7B78F2, 
-      #6197EE, 
-      #45B5E9, 
-      #10D7E2, 
-    );
-$Gradient_2: linear-gradient(
-      80deg, 
-      #21BDB8, 
-      #280684,
-    );
-$Invisible: rgba(0,0,0,0);
+  80deg,
+  #9358f7,
+  #7b78f2,
+  #6197ee,
+  #45b5e9,
+  #10d7e2
+);
+$Gradient_2: linear-gradient(80deg, #21bdb8, #280684);
+$Invisible: rgba(0, 0, 0, 0);
 
 // Bright Mode
-$BrightAccent: #1D65F7;
-$BrightAccent_Contrast: #F6F6F6;
-$BrightAlertColor: #EA1010;
+$BrightAccent: #1d65f7;
+$BrightAccent_Contrast: #f6f6f6;
+$BrightAlertColor: #ea1010;
 $BrightLogoColor: #212121;
 $BrightTextColor: #212121;
-$BrightSloganColor: rgba(33, 33, 33, .75);
-$BrightPageBackgroundColor: #F6F6F6;
-$BrightContainerBackgroundColor: #FFF;
-$BrightSidebarBackgroundColor: #FFF;
-$BrightTagsColor: #F1F1F1;
+$BrightSloganColor: rgba(33, 33, 33, 0.75);
+$BrightPageBackgroundColor: #f6f6f6;
+$BrightContainerBackgroundColor: #fff;
+$BrightSidebarBackgroundColor: #fff;
+$BrightTagsColor: #f1f1f1;
 
 // Dark Mode
-$DarkAccent: #3577FF;
-$DarkAccent_Contrast: #F7FAFC;
-$DarkAlertColor: #EF5D5D;
-$DarkLogoColor: #CBD6E3;
-$DarkTextColor: #CBD6E3;
-$DarkSloganColor: #AFBFD2;
-$DarkPageBackgroundColor: #0B1622;
-$DarkContainerBackgroundColor: #171E2E;
-$DarkSidebarBackgroundColor: #171E2E;
-$DarkTagsColor: #4C76EA;
+$DarkAccent: #3577ff;
+$DarkAccent_Contrast: #f7fafc;
+$DarkAlertColor: #ef5d5d;
+$DarkLogoColor: #cbd6e3;
+$DarkTextColor: #cbd6e3;
+$DarkSloganColor: #afbfd2;
+$DarkPageBackgroundColor: #0b1622;
+$DarkContainerBackgroundColor: #171e2e;
+$DarkSidebarBackgroundColor: #171e2e;
+$DarkTagsColor: #4c76ea;
