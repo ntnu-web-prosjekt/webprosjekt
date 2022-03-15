@@ -1,0 +1,22 @@
+.about {
+  width: 80vw;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 24px;
+  margin: 0 auto;
+}
+
+.creators {
+  display: flex;
+  gap: 24px;
+  height: 24px;
+
+  p,
+  span {
+    font-size: 24px;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
