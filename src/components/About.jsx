@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./about/about.scss";
 function About() {
   return (
@@ -47,7 +48,7 @@ function About() {
           Magnus Moen
         </a>
       </p>
-      <button>Go Home</button>
+      {/* <NavLink to="/">Go Home</NavLink> */}
     </div>
   );
 }
