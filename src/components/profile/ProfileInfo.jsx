@@ -11,7 +11,7 @@ export default class ProfileInfo extends Component {
           <span>Associate Professor</span>
           <p>NTNU Gjøvik</p>
           <a href="tel:+4733378901">+47 333 78 901</a>
-          <a href="mailto:someone@example.com">Send email</a>
+          <a href="mailto:someone@example.com">johnwayne@bat.man</a>
         </div>
       </div>
     );

@@ -8,6 +8,7 @@ import ProfileInfo from "./profile/ProfileInfo";
 function App() {
   return (
     <div className="Profile">
+      <div className="Sidebar"></div>
       <ProfileInfo />
       <Tags />
       <AboutMe />
