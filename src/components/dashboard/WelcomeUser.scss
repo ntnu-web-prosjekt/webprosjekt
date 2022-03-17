@@ -1,62 +1,61 @@
 @import "../../sass/abstracts/_colors";
 
 .welcome {
-    background-color: $DarkContainerBackgroundColor;
-    width: 100%;
-    border-radius: 5px;
-    height: 100%;
+  background-color: $DarkContainerBackgroundColor;
+  width: 100%;
+  border-radius: 5px;
 
-    &__container{
-        margin: auto;
-        width: fit-content;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  &__container {
+    margin: auto;
+    width: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        &__profile {
-            height: 100%;
-            display: flex;
-	        flex-direction: row;
-            justify-content: center;
-	        align-items: center;
+    &__profile {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
 
-            img {
-                border-radius: 50%;
-                max-height: 200px;
-            }
+      img {
+        border-radius: 50%;
+        max-height: 200px;
+      }
 
-            &__heading {
-                color: $DarkAccent_Contrast;
-                padding-right: 2rem;
+      &__heading {
+        color: $DarkAccent_Contrast;
+        padding-right: 2rem;
 
-                &__text--small {
-                    display: block;
-                    font-size: smaller;
-                    font-weight: lighter;
-                }
-
-                &__text--big {
-                    display: block;
-                }
-            }
+        &__text--small {
+          display: block;
+          font-size: smaller;
+          font-weight: lighter;
         }
 
-        &__message{
-            &__text {
-                font-size: larger;
-                color: $DarkTagsColor;
-                display: flex;
-                flex-direction: row;
-	            align-items: center;
-                padding-top: 2rem;
-                
-                &:hover {
-                    cursor: pointer;
-                    font-weight: bold;
-                }
-            }
+        &__text--big {
+          display: block;
         }
+      }
     }
+
+    &__message {
+      &__text {
+        font-size: larger;
+        color: $DarkTagsColor;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 2rem;
+
+        &:hover {
+          cursor: pointer;
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }
