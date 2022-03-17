@@ -59,14 +59,42 @@
         }
     }
 }
-.aboutMe {
+.aboutMe,
+.myReview,
+.pendingReq-container {
     width: 500px;
-    height: 400px;
+    height: fit-content;
     background-color: #171e2e;
     border-radius: 15px;
     padding: 10px;
     margin-top: 20px;
     h2 {
         margin-bottom: 20px;
+    }
+}
+textarea {
+    width: 100%;
+    height: max-content;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    color: white;
+    &::placeholder {
+        color: gray;
+    }
+}
+.pendingReq-container {
+    ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+        }
     }
 }
