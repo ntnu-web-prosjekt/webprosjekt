@@ -13,7 +13,13 @@ export default class PendingReq extends Component {
             </button>
           </li>
           <li>
-            Fullstack{" "}
+            Fullstack Development{" "}
+            <button type="button" className="viewReqBtn">
+              view
+            </button>
+          </li>
+          <li>
+            Cloud Tech{" "}
             <button type="button" className="viewReqBtn">
               view
             </button>
