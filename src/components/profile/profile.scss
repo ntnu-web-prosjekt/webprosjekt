@@ -1,23 +1,23 @@
-.Profile {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    width: 100vw;
-    height: 100vh;
+// .Profile {
+//     display: grid;
+//     grid-template-columns: repeat(5, 1fr);
+//     grid-template-rows: 1fr;
+//     grid-column-gap: 20px;
+//     grid-row-gap: 20px;
+//     width: 100vw;
+//     height: 100vh;
 
-    .Sidebar {
-        grid-area: 1 / 1 / 6 / 2;
-    }
-    .profile-info {
-        grid-area: 1 / 2 / 6 / 4;
-    }
-    .tags-container,
-    .aboutMe {
-        grid-area: 1 / 4 / 6 / 6;
-    }
-}
+//     .Sidebar {
+//         grid-area: 1 / 1 / 6 / 2;
+//     }
+//     .profile-info {
+//         grid-area: 1 / 2 / 6 / 4;
+//     }
+//     .tags-container,
+//     .aboutMe {
+//         grid-area: 1 / 4 / 6 / 6;
+//     }
+// }
 .profile-info {
     width: 500px;
     height: 600px;
