@@ -1,0 +1,23 @@
+@import "../../sass/abstracts/_colors";
+
+button.req-button {
+    width: 50%;
+    color: white;
+    background-color: rgb(58, 123, 251);
+    border: none;
+    border-radius: 10px;
+    height: 40px;  
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    img{
+        display: inline;
+    }
+}
+
+.test {
+    position: relative;
+    top: -5px;
+}
