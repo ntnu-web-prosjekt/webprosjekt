@@ -7,11 +7,11 @@ function Sidebar() {
         <img src={process.env.PUBLIC_URL + "img/logo.svg"} alt="logo" />
       </a>
 
-      <ul class="main-nav">
-        <li class="current">
+      <ul className="main-nav">
+        <li className="current">
           <a href="#">
             <img
-              class="icon"
+              className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/house.svg"}
               alt="icon"
             />
@@ -21,17 +21,17 @@ function Sidebar() {
         <li>
           <a href="#">
             <img
-              class="icon"
+              className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/list.svg"}
               alt="icon"
             />
-            Requests <span class="alert">2</span>
+            Requests <span className="alert">2</span>
           </a>
         </li>
         <li>
           <a href="#">
             <img
-              class="icon"
+              className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/cata.svg"}
               alt="icon"
             />
@@ -41,7 +41,7 @@ function Sidebar() {
         <li>
           <a href="#">
             <img
-              class="icon"
+              className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/magnify.svg"}
               alt="icon"
             />
@@ -50,11 +50,11 @@ function Sidebar() {
         </li>
       </ul>
 
-      <ul class="second-nav">
+      <ul className="second-nav">
         <li>
           <a href="#">
             <img
-              class="icon"
+              className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/user.svg"}
               alt="icon"
             />
@@ -64,7 +64,7 @@ function Sidebar() {
         <li>
           <a href="#">
             <img
-              class="icon"
+              className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/end.svg"}
               alt="icon"
             />
