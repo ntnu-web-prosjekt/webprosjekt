@@ -1,6 +1,7 @@
 @import "abstracts/_colors";
 @import "base/_typography";
 @import "base/reset";
+@import "base/icons";
 
 html {
   background: $DarkPageBackgroundColor;
@@ -43,4 +44,19 @@ h6 {
 
 p {
   font-size: 16px;
+}
+
+a {
+  color: $DarkAccent;
+}
+
+.page {
+  // width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(350px, 400px) auto;
+}
+
+.pageContent {
+  overflow-y: scroll;
 }

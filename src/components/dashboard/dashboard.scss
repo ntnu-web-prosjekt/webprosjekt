@@ -1,0 +1,11 @@
+.dashboard {
+  margin: 100px;
+  display: grid;
+  gap: 64px;
+  grid-template-rows: auto auto;
+}
+
+.requests {
+  display: flex;
+  gap: 24px;
+}
