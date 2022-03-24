@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 
 import Catalogue from "./components/Catalogue";
 import Dashboard from "./components/Dashboard";
@@ -9,8 +15,8 @@ import Inbox from "./components/Inbox";
 import Profile from "./components/Profile";
 import Registration from "./components/Registration";
 import Settings from "./components/Settings";
-import Sidebar from "./components/Sidebar";
-import MyRequsts from "./components/MyRequsts";
+import MyRequsts from "./components/MyRequests";
+import UserProfile from "./components/Profile";
 
 export default function basicRouting() {
   return (
@@ -18,37 +24,34 @@ export default function basicRouting() {
       <div>
         <ul>
           <li>
-            <Link to="/">Dashboard</Link>
+            <NavLink to="/">Dashboard</NavLink>
           </li>
           <li>
-            <Link to="/login">Login</Link>
+            <NavLink to="/login">Login</NavLink>
           </li>
           <li>
-            <Link to="/myRequests">My Requests</Link>
+            <NavLink to="/myRequests">My Requests</NavLink>
           </li>
           <li>
-            <Link to="/inbox">Inbox</Link>
+            <NavLink to="/inbox">Inbox</NavLink>
           </li>
           <li>
-            <Link to="/profile">Profile</Link>
+            <NavLink to="/profile">Profile</NavLink>
           </li>
           <li>
-            <Link to="/settings">Settings</Link>
+            <NavLink to="/settings">Settings</NavLink>
           </li>
           <li>
-            <Link to="/UserProfile">UserProfile</Link>
+            <NavLink to="/UserProfile">UserProfile</NavLink>
           </li>
           <li>
-            <Link to="/findUser">Find User</Link>
+            <NavLink to="/findUser">Find User</NavLink>
           </li>
           <li>
-            <Link to="/registration">Registrations</Link>
+            <NavLink to="/registration">Registrations</NavLink>
           </li>
           <li>
-            <Link to="/sidebar">Sidebar</Link>
-          </li>
-          <li>
-            <Link to="/catalogue">catalogue</Link>
+            <NavLink to="/catalogue">catalogue</NavLink>
           </li>
         </ul>
 
@@ -72,8 +75,6 @@ export default function basicRouting() {
           <Route exact path="/findUser" element={<FindUser />}></Route>
 
           <Route exact path="/registration" element={<Registration />}></Route>
-
-          <Route exact path="/sidebar" element={<Sidebar />}></Route>
 
           <Route exact path="/catalogue" element={<Catalogue />}></Route>
         </Routes>
