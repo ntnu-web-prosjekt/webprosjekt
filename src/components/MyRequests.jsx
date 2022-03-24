@@ -1,7 +1,14 @@
-import React, { Component } from "react";
+import "./Requests/Requests.scss";
+import UndertakenReq from "./Requests/UndertakenReq";
+import UsersCurrentReq from "./Requests/UsersCurrentReq";
 
-export default class MyRequests extends Component {
-  render() {
-    return <div>MyRequests</div>;
-  }
+function MyRequests() {
+  return (
+    <div className="Login">
+      <UsersCurrentReq />
+      <UndertakenReq />
+    </div>
+  );
 }
+
+export default MyRequests;
