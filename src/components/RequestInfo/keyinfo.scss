@@ -1,0 +1,28 @@
+@import "../../sass/abstracts/_colors";
+
+.keyinfo {
+    background-color: $DarkContainerBackgroundColor;
+    border-radius: 5px;
+    padding: 1rem;
+
+    &__list {
+        &__el {
+            list-style: none;
+            margin-top: 1rem;
+
+            &__sub {
+                font-weight: 200;
+
+                a {
+                    color: whitesmoke;
+                }
+            }
+
+            &__icon {
+                padding-right: 15px;
+                position: relative;
+                top: 5px;
+            }
+        }
+    }
+}

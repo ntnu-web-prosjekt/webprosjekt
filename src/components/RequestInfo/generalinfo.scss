@@ -1,0 +1,67 @@
+@import "../../sass/abstracts/_colors";
+
+.general {
+    background-color: $DarkContainerBackgroundColor;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.gen-info {
+
+    &__title {
+        display: block;
+        font-weight: 200;
+        margin-bottom: 0.3rem;
+    }
+
+    &__desc {
+        display: block;
+        font-size: larger;
+
+    }
+
+    &__dates {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-top: 1.5rem;
+
+        div {
+            margin-right: 2rem;
+        }
+    }
+}
+
+.gen-tags {
+    margin-top: 1.5rem;
+
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+        max-width: 75ch;
+
+        li{
+            list-style: none;
+            background-color: $DarkTagsColor;
+            margin-right: 1rem;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.gen-desc {
+    margin-top: 2.5rem;
+
+    h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        max-width: 75ch;
+        line-height: 24px;
+    }
+}
