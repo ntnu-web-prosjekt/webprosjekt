@@ -8,8 +8,8 @@ function App() {
     <div className="Settings">
       <h1>My Profile &gt; Settings</h1>
       <div className="Sidebar"></div>
-      <PersonalDetails />
       <ProfileImage />
+      <PersonalDetails />
       <ChangePwd />
     </div>
   );

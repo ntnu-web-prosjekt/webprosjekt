@@ -15,3 +15,21 @@
     width: 200px;
   }
 }
+.Personal-details,
+.Change-pwd {
+  width: fit-content;
+  height: fit-content;
+  background-color: #171e2e;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  input,
+  select {
+    background-color: #0b1622;
+    color: #fff;
+  }
+}
