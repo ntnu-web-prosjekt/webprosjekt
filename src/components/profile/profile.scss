@@ -1,0 +1,80 @@
+.profile-info {
+    width: 500px;
+    height: 600px;
+    background-color: #171e2e;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    img {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+    }
+    a {
+        color: #fff;
+    }
+}
+.tags-container {
+    width: 500px;
+    height: fit-content;
+    background-color: #171e2e;
+    border-radius: 15px;
+    padding: 10px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 10px;
+
+        li {
+            padding: 20px;
+            margin: 10px;
+            background-color: #4c76ea;
+            border-radius: 14px;
+        }
+    }
+}
+.aboutMe,
+.myReview,
+.pendingReq-container {
+    width: 500px;
+    height: fit-content;
+    background-color: #171e2e;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 20px;
+    h2 {
+        margin-bottom: 20px;
+    }
+}
+textarea {
+    width: 100%;
+    height: max-content;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    color: white;
+    &::placeholder {
+        color: gray;
+    }
+}
+.pendingReq-container {
+    ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+        }
+    }
+}

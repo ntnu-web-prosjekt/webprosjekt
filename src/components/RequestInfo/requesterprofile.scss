@@ -1,0 +1,50 @@
+@import "../../sass/abstracts/_colors";
+
+.requester {
+  background-color: $DarkContainerBackgroundColor;
+  border-radius: 5px;
+
+  &__container {
+    margin: auto;
+    width: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__profile {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        border-radius: 50%;
+        height: 100px;
+      }
+
+      &__heading {
+        color: $DarkAccent_Contrast;
+        padding-right: 2rem;
+
+        &__text--small {
+          display: block;
+          font-size: smaller;
+          font-weight: lighter;
+        }
+
+        &__text--big {
+          display: block;
+        }
+
+        &__link {
+          display: block;
+          margin-top: 1rem;
+          font-size: smaller;
+        }
+      }
+    }
+  }
+}
