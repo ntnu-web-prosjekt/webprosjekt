@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./sass/main.scss";
-import App from "./components/Registration";
+//import App from "./components/Registration";
+//import Login from "./components/Login";
+//import MyRequests from "./components/MyRequests";
+import Inbox from "./components/Inbox";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Inbox />
   </React.StrictMode>,
   document.getElementById("root")
 );
