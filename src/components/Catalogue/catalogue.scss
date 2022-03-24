@@ -1,14 +1,26 @@
 @import "../../sass/abstracts/_colors.scss";
 .catalogue {
   margin: 100px;
+  margin-bottom: 100px;
   margin-bottom: 20px;
   display: grid;
-  gap: 64px;
-  grid-template-rows: auto auto;
+  gap: 10%;
+  grid-template-columns: 70% 20%;
+}
+
+.filter {
+  display: grid;
+  gap: 24px;
+  align-content: start;
+
+  .title {
+    background-color: $DarkAccent;
+    height: 35px;
+    text-align: center;
+  }
 }
 
 .requests {
-  width: 60%;
   height: 100%;
   overflow: auto;
   border-radius: 10px;
