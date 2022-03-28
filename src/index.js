@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./sass/main.scss";
-import App from "../src/components/NewRequest/RequestForm";
+import App from "./basicRouter";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(<App />, document.getElementById("root"));
