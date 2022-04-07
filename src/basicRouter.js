@@ -14,10 +14,24 @@ import Inbox from "./components/Inbox";
 import Profile from "./components/Profile";
 import Registration from "./components/Registration";
 import Settings from "./components/Settings";
-import MyRequsts from "./components/MyRequests";
+import MyRequests from "./components/MyRequests";
 import UserProfile from "./components/Profile";
+import RequestInfo from "./components/RequestInfo";
+import About from "./components/About";
 
-export default function basicRouting() {
+// Start Auth
+import { useState } from "react";
+// End Auth
+
+export default function BasicRouting() {
+  // Start Auth
+  const [token, setToken] = useState();
+
+  if (!token) {
+    return <Login setToken={setToken} />;
+  }
+  // End Auth
+
   return (
     <Router>
       <div>
@@ -52,6 +66,12 @@ export default function basicRouting() {
           <li>
             <NavLink to="/catalogue">catalogue</NavLink>
           </li>
+          <li>
+            <NavLink to="/requestInfo">requestInfo</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">about</NavLink>
+          </li>
         </ul>
 
         <hr /> */}
@@ -59,9 +79,13 @@ export default function basicRouting() {
         <Routes>
           <Route exact path="/" element={<Dashboard />}></Route>
 
-          <Route exact path="/login" element={<Login />}></Route>
+          <Route
+            exact
+            path="/login"
+            element={<Login setToken={setToken} />}
+          ></Route>
 
-          <Route exact path="/myRequsts" element={<MyRequsts />}></Route>
+          <Route exact path="/myRequests" element={<MyRequests />}></Route>
 
           <Route exact path="/inbox" element={<Inbox />}></Route>
 
@@ -76,6 +100,10 @@ export default function basicRouting() {
           <Route exact path="/registration" element={<Registration />}></Route>
 
           <Route exact path="/catalogue" element={<Catalogue />}></Route>
+
+          <Route exact path="/requestInfo" element={<RequestInfo />}></Route>
+
+          <Route exact path="/about" element={<About />}></Route>
         </Routes>
       </div>
     </Router>

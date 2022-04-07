@@ -1,75 +1,76 @@
+import { NavLink } from "react-router-dom";
 import "./Sidebar/Sidebar.scss";
 
 function Sidebar() {
   return (
     <nav>
-      <a href="#">
+      <NavLink to={"/"}>
         <img src={process.env.PUBLIC_URL + "img/logo.svg"} alt="logo" />
-      </a>
+      </NavLink>
 
       <ul className="main-nav">
-        <li className="current">
-          <a href="#">
+        <li>
+          <NavLink to={"/"}>
             <img
               className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/house.svg"}
               alt="icon"
             />
             Dashboard
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#">
+          <NavLink to={"myRequests"}>
             <img
               className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/list.svg"}
               alt="icon"
             />
             Requests <span className="alert">2</span>
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#">
+          <NavLink to={"/catalogue"}>
             <img
               className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/cata.svg"}
               alt="icon"
             />
             Catalogue
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#">
+          <NavLink to={"/findUser"}>
             <img
               className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/magnify.svg"}
               alt="icon"
             />
             Find User
-          </a>
+          </NavLink>
         </li>
       </ul>
 
       <ul className="second-nav">
         <li>
-          <a href="#">
+          <NavLink to={"/profile"}>
             <img
               className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/user.svg"}
               alt="icon"
             />
             My Profile
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="#">
+          <NavLink to={"/logout"}>
             <img
               className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/end.svg"}
               alt="icon"
             />
             Log Out
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
