@@ -18,14 +18,11 @@ import MyRequests from "./components/MyRequests";
 import UserProfile from "./components/Profile";
 import RequestInfo from "./components/RequestInfo";
 import About from "./components/About";
-
-// Start Auth
-import { useState } from "react";
-// End Auth
+import useToken from "./components/token/useToken";
 
 export default function BasicRouting() {
   // Start Auth
-  const [token, setToken] = useState();
+  const { token, setToken } = useToken();
 
   if (!token) {
     return <Login setToken={setToken} />;
