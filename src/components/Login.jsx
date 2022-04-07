@@ -18,15 +18,14 @@ async function loginUser(credentials) {
 // End Auth
 
 export default function Login({ setToken }) {
-  const bcrypt = require("bcryptjs");
-  const crypto = require("crypto");
+  var passwordHash = require("password-hash");
   // Start Auth
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-  const hashedPassword = bcrypt.hashSync(password, bcrypt.genSalt(6)); // hash created previously created upon sign up
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    var hashedPassword = passwordHash.generate(password);
     const token = await loginUser({
       username,
       hashedPassword,
