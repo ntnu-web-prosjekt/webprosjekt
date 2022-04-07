@@ -6,29 +6,29 @@ import "./requestinfo.scss";
 import Sidebar from "./Sidebar";
 
 function RequestInfo() {
-    return (
-        <div className="request-info-container">
-            <Sidebar/>
+  return (
+    <div className="request-info-container">
+      <Sidebar />
 
-            <div class="request-info">
-                <div class="general">
-                    <GeneralInfo/>
-                </div>
-
-                <div class="profile">
-                    <RequsterProfile/>
-                </div>
-
-                <div class="buttons">
-                    <ButtonContainer/>
-                </div>
-
-                <div class="key-info">
-                    <KeyInfo/>
-                </div>
-            </div>
+      <div className="request-info">
+        <div className="general">
+          <GeneralInfo />
         </div>
-    );
+
+        <div className="profile">
+          <RequsterProfile />
+        </div>
+
+        <div className="buttons">
+          <ButtonContainer />
+        </div>
+
+        <div className="key-info">
+          <KeyInfo />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default RequestInfo;

@@ -1,6 +1,6 @@
 import "./Requests/Requests.scss";
 import UndertakenReq from "./Requests/UndertakenReq";
-import UsersCurrentReq from "./Requests/UsersCurrentReq"
+import UsersCurrentReq from "./Requests/UsersCurrentReq";
 
 function MyRequests() {
   return (
