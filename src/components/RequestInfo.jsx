@@ -4,31 +4,54 @@ import GeneralInfo from "./RequestInfo/GeneralInfo";
 import ButtonContainer from "./RequestInfo/ButtonContainer";
 import "./requestinfo.scss";
 import Sidebar from "./Sidebar";
+import {useState, useEffect} from "react";
+import { useParams } from 'react-router-dom'
 
-function RequestInfo() {
+function RequestInfo(){
+    const params = useParams()
+    //const [requestID] = useState(request._id)
+    //console.log(requestID)
+
+    const [request, setRequest] = useState({});
+    useEffect(() => {
+        const request = `http://localhost:5000/requests/${params._id}`;
+        const fetchRequest = async () => {
+            try {
+                const response = await fetch(request);
+                const data = await response.json();
+                console.log(data);
+                setRequest(data);
+            }
+            catch (error) {
+                console.log(error);
+            }
+        };
+        fetchRequest();
+    }, [params._id]);
     return (
         <div className="request-info-container">
             <Sidebar/>
 
-            <div class="request-info">
-                <div class="general">
-                    <GeneralInfo/>
+            <div className="request-info">
+                <div className="general">
+                    <GeneralInfo request={request}/>
                 </div>
 
-                <div class="profile">
+                <div className="profile">
                     <RequsterProfile/>
                 </div>
 
-                <div class="buttons">
+                <div className="buttons">
                     <ButtonContainer/>
                 </div>
 
-                <div class="key-info">
-                    <KeyInfo/>
+                <div className="key-info">
+                    <KeyInfo request={request}/>
                 </div>
             </div>
         </div>
-    );
+    );    
 }
+
 
 export default RequestInfo;

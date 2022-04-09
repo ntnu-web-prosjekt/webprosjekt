@@ -3,7 +3,7 @@ import React from "react";
 class UndertakenReq extends React.Component {
   render() {
     return (
-      <div className="requests">
+      <div >
         <div className="abovetable">
           <h2 className="justify_start">Undertaken requests</h2>
         </div>

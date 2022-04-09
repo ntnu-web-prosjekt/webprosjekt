@@ -5,7 +5,7 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div class="loginform">
-                <img src={exammatcher_logo} alt="Logo" id='logo' />
+                <img className='login_img' src={exammatcher_logo} alt="Logo" id='logo' />
                 <form>
                     <label>
                         <p>E-mail</p>

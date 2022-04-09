@@ -2,9 +2,14 @@
 @import "../../sass/abstracts/_colors";
 
 .requests {
-    margin: 4rem;
     display: flex;
     flex-direction: column;
+    width: 100vw;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
 }
 
 .abovetable {
@@ -20,7 +25,7 @@
 .above_button {
     background: #3577FF;
     color: $DarkTextColor;
-    width: 10vw;
+    width: 6vw;
     margin-left: 1rem;
     padding: 0.5rem 0;
     font-size: 0.8em;
@@ -41,6 +46,9 @@ th, td {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
+    line-height: 1.2;
+    width: 10px;
+
   }
 
 .tablehead {

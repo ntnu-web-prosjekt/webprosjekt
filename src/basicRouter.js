@@ -14,7 +14,8 @@ import Inbox from "./components/Inbox";
 import Profile from "./components/Profile";
 import Registration from "./components/Registration";
 import Settings from "./components/Settings";
-import MyRequsts from "./components/MyRequests";
+import MyRequests from "./components/MyRequests";
+import RequestInfo from "./components/RequestInfo";
 import UserProfile from "./components/Profile";
 
 export default function basicRouting() {
@@ -30,7 +31,7 @@ export default function basicRouting() {
           </li>
           <li>
             <NavLink to="/myRequests">My Requests</NavLink>
-          </li>
+          </li> 
           <li>
             <NavLink to="/inbox">Inbox</NavLink>
           </li>
@@ -61,7 +62,9 @@ export default function basicRouting() {
 
           <Route exact path="/login" element={<Login />}></Route>
 
-          <Route exact path="/myRequsts" element={<MyRequsts />}></Route>
+          <Route exact path="/myRequests" element={<MyRequests />}></Route>
+
+          <Route exact path ="/request/:_id" element={<RequestInfo />}></Route>
 
           <Route exact path="/inbox" element={<Inbox />}></Route>
 
