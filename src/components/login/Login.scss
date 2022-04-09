@@ -2,38 +2,37 @@
 @import "../../sass/abstracts/_colors";
 
 .Login {
-    @include font;
-    color: $DarkTextColor;
-    display: flex;
-    justify-content: center;
-}
+  @include font;
+  color: $DarkTextColor;
+  display: flex;
+  justify-content: center;
 
-#statistics {
+  #statistics {
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 15rem 0 0 0;
-}
+  }
 
-.heading {
+  .heading {
     font-size: 1.3em;
     text-align: center;
     margin: 0 5rem;
-}
+  }
 
-#info {
+  #info {
     color: $DarkTextColor;
     margin: 2rem;
     font-size: 0.9em;
-}
+  }
 
-#statbox-container {
+  #statbox-container {
     display: flex;
-}
+  }
 
-.statbox {
-    background: linear-gradient(315deg, #21BDB8 0%, #280684 100%);
+  .statbox {
+    background: linear-gradient(315deg, #21bdb8 0%, #280684 100%);
     width: 10vw;
     height: 7vw;
     border-radius: 10px;
@@ -41,95 +40,103 @@
     flex-direction: column;
     align-items: center;
     margin: 0 3rem 0 0;
+  }
 
-}
-
-.stattype {
+  .stattype {
     margin-top: 0.8rem;
     text-align: center;
-}
+  }
 
-.statvalue {
+  .statvalue {
     font-size: 2.3em;
     margin: 1rem;
-}
+  }
 
-.loginform {
+  .loginform {
     width: 40%;
     background: $DarkContainerBackgroundColor;
     display: flex;
     flex-direction: column;
     align-items: center;
-	justify-content: flex-start;
-	align-content: stretch;
+    justify-content: flex-start;
+    align-content: stretch;
     height: 100vh;
-}
+  }
 
-#logo {
+  #logo {
     margin: 3rem 0 3rem 0;
     width: 13vw;
+  }
 
-}
-
-form {
+  form {
     display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: stretch;
-}
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+  }
 
-label {
+  label {
     margin: 1vh;
-}
+  }
 
+<<<<<<< HEAD
 .login_img {
+=======
+  img {
+>>>>>>> main
     padding-top: 20vh;
-}
+  }
 
-#login {
+  #login {
     margin: 1vh;
     color: white;
     border-radius: 10px;
-    background-image: linear-gradient(to right, #9358F7 0%, #10D7E2 50%, #6197EE 100%);
+    background-image: linear-gradient(
+      to right,
+      #9358f7 0%,
+      #10d7e2 50%,
+      #6197ee 100%
+    );
     cursor: pointer;
     transition: 0.5s;
     background-size: 200% auto;
-}
+  }
 
-#login:hover {
+  #login:hover {
     background-position: right center;
   }
 
-.inputField {
-    background-color: #0B1622;
+  .inputField {
+    background-color: #0b1622;
     color: $DarkTextColor;
     margin: 0.4rem 0;
+  }
 
-}
-
-#forgot {
+  #forgot {
     font-size: 0.8rem;
     color: $DarkTextColor;
     margin: 0.5rem 0;
     font-size: 0.7em;
-}
+  }
 
-.inputField, #login, .request {
+  .inputField,
+  #login,
+  .request {
     font-size: inherit;
     padding: 0.6rem 0;
     border: none;
     width: 18vw;
     border-radius: 10px;
-}
+  }
 
-label > p {
+  label > p {
     font-size: 0.8em;
-}
+  }
 
-.request {
-    background: #3577FF;
+  .request {
+    background: #3577ff;
     color: $DarkTextColor;
     width: 12vw;
     margin: 6rem 0 1rem 0;
@@ -137,8 +144,9 @@ label > p {
     font-size: 0.8em;
     cursor: pointer;
     transition: 0.5s;
-}
+  }
 
-.request:hover {
-    background-color: #6197EE
+  .request:hover {
+    background-color: #6197ee;
+  }
 }
