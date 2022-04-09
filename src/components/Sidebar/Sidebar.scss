@@ -1,8 +1,7 @@
 nav {
-  background-color: rgb(24, 30, 45);
-  color: whitesmoke;
+    background-color: rgb(24,30,45);
+    color: whitesmoke;
 
-<<<<<<< HEAD
     height: 100vh;
     width: 25vw;
     
@@ -12,74 +11,62 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	align-content: stretch;
-=======
-  height: 100vh;
-  max-width: 400px;
-  min-width: 350px;
->>>>>>> main
 
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: stretch;
+    overflow-x: auto;
 
-  overflow-x: auto;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  img {
-    margin-top: 50px;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-    width: 80%;
-
-    li {
-      text-align: left;
-      padding-left: 15px;
-      padding-right: 10px;
-      border-radius: 10px;
-
-      img.icon {
-        margin-top: 0;
-        padding-right: 20px;
-        position: relative;
-        top: 2px;
-      }
-
-      span.alert {
-        background-color: rgb(255, 39, 39);
-        border-radius: 50%;
-        padding: 5px 10px;
-      }
+    a {
+        color: inherit;
+        text-decoration: none;
     }
 
-    .active {
-      background-color: rgb(58, 123, 251);
-      font-weight: bold;
+    img{
+        margin-top: 50px;
     }
-  }
 
-  ul.main-nav {
-    li {
-      padding-top: 15px;
-      padding-bottom: 15px;
+    ul {
+        list-style: none;
+        padding-left: 0;
+        width: 80%;
+
+        li {
+            text-align: left;
+            padding-left: 15px;
+            padding-right: 10px;
+            border-radius: 10px;
+
+            img.icon {
+                margin-top: 0;
+                padding-right: 20px;
+                position: relative;
+                top: 2px;
+            }
+
+            span.alert {
+                background-color: rgb(255, 39, 39);
+                border-radius: 50%;
+                padding: 5px 10px;
+            }
+        }
+
+        .current {
+            background-color: rgb(58, 123, 251);
+            font-weight: bold;
+        }
     }
-  }
 
-  ul.second-nav {
-    margin-bottom: 20px;
-
-    li {
-      padding-top: 10px;
-      padding-bottom: 10px;
+    ul.main-nav {
+        li {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
     }
-  }
+
+    ul.second-nav {
+        margin-bottom: 20px;
+        
+        li {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
 }

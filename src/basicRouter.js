@@ -15,24 +15,10 @@ import Profile from "./components/Profile";
 import Registration from "./components/Registration";
 import Settings from "./components/Settings";
 import MyRequests from "./components/MyRequests";
-<<<<<<< HEAD
 import RequestInfo from "./components/RequestInfo";
-=======
->>>>>>> main
 import UserProfile from "./components/Profile";
-import RequestInfo from "./components/RequestInfo";
-import About from "./components/About";
-import useToken from "./components/token/useToken";
 
-export default function BasicRouting() {
-  // Start Auth
-  const { token, setToken } = useToken();
-
-  if (!token) {
-    return <Login setToken={setToken} />;
-  }
-  // End Auth
-
+export default function basicRouting() {
   return (
     <Router>
       <div>
@@ -67,12 +53,6 @@ export default function BasicRouting() {
           <li>
             <NavLink to="/catalogue">catalogue</NavLink>
           </li>
-          <li>
-            <NavLink to="/requestInfo">requestInfo</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">about</NavLink>
-          </li>
         </ul>
 
         <hr />
@@ -80,18 +60,11 @@ export default function BasicRouting() {
         <Routes>
           <Route exact path="/" element={<Dashboard />}></Route>
 
-          <Route
-            exact
-            path="/login"
-            element={<Login setToken={setToken} />}
-          ></Route>
+          <Route exact path="/login" element={<Login />}></Route>
 
           <Route exact path="/myRequests" element={<MyRequests />}></Route>
-<<<<<<< HEAD
 
           <Route exact path ="/request/:_id" element={<RequestInfo />}></Route>
-=======
->>>>>>> main
 
           <Route exact path="/inbox" element={<Inbox />}></Route>
 
@@ -106,10 +79,6 @@ export default function BasicRouting() {
           <Route exact path="/registration" element={<Registration />}></Route>
 
           <Route exact path="/catalogue" element={<Catalogue />}></Route>
-
-          <Route exact path="/requestInfo" element={<RequestInfo />}></Route>
-
-          <Route exact path="/about" element={<About />}></Route>
         </Routes>
       </div>
     </Router>

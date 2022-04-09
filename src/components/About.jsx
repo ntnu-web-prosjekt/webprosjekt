@@ -48,7 +48,7 @@ function About() {
           Magnus Moen
         </a>
       </p>
-      <NavLink to="/">Go Home</NavLink>
+      {/* <NavLink to="/">Go Home</NavLink> */}
     </div>
   );
 }
