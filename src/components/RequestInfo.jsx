@@ -7,6 +7,7 @@ import Sidebar from "./Sidebar";
 import {useState, useEffect} from "react";
 import { useParams } from 'react-router-dom'
 
+<<<<<<< HEAD
 function RequestInfo(){
     const params = useParams()
     //const [requestID] = useState(request._id)
@@ -55,3 +56,32 @@ function RequestInfo(){
 
 
 export default RequestInfo;
+=======
+function RequestInfo() {
+  return (
+    <div className="request-info-container">
+      <Sidebar />
+
+      <div className="request-info">
+        <div className="general">
+          <GeneralInfo />
+        </div>
+
+        <div className="profile">
+          <RequsterProfile />
+        </div>
+
+        <div className="buttons">
+          <ButtonContainer />
+        </div>
+
+        <div className="key-info">
+          <KeyInfo />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default RequestInfo;
+>>>>>>> main

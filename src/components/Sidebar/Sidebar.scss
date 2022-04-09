@@ -2,6 +2,7 @@ nav {
   background-color: rgb(24, 30, 45);
   color: whitesmoke;
 
+<<<<<<< HEAD
     height: 100vh;
     width: 25vw;
     
@@ -11,6 +12,11 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	align-content: stretch;
+=======
+  height: 100vh;
+  max-width: 400px;
+  min-width: 350px;
+>>>>>>> main
 
   display: flex;
   flex-direction: column;

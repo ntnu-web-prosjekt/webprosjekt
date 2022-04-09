@@ -1,8 +1,12 @@
 import "./Requests/Requests.scss";
 import UndertakenReq from "./Requests/UndertakenReq";
+<<<<<<< HEAD
 import UsersCurrentReq from "./Requests/UsersCurrentReq"
 import Sidebar from "./Sidebar";
 
+=======
+import UsersCurrentReq from "./Requests/UsersCurrentReq";
+>>>>>>> main
 
 function MyRequests() {
   return (
