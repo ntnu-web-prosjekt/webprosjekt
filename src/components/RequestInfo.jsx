@@ -14,10 +14,10 @@ function RequestInfo(){
 
     const [request, setRequest] = useState({});
     useEffect(() => {
-        const request = `http://localhost:5000/requests/${params._id}`;
+        const req = `http://localhost:5000/requests/${params._id}`;
         const fetchRequest = async () => {
             try {
-                const response = await fetch(request);
+                const response = await fetch(req);
                 const data = await response.json();
                 console.log(data);
                 setRequest(data);

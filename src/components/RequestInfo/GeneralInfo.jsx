@@ -1,6 +1,6 @@
 import "./generalinfo.scss";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function GeneralInfo(props) {
     return (
@@ -25,13 +25,12 @@ function GeneralInfo(props) {
             </div>
             <div className="gen-tags">
             <span className="gen-info__title">Tags</span>
-{/*             <ul className="gen-tags__list">
-                {props.request.tags.map(tag => (
-                    <li key={tag}>{tag}</li>
-                ))}
-            </ul> */}
+             <ul className="gen-tags__list">
+                 {props.request.tags != null && props.request.tags.map((tag, index) => {
+                        return <li key={index} className="gen-tags__item">{tag}</li>
+                    })}
+                </ul>
             </div>
-
             <div className="gen-desc">
                 <h2>Descripton</h2>
                 <p>{props.request.description}</p>
