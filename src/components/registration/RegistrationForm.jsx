@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class RegistrationForm extends Component {
   constructor(props) {
@@ -255,7 +256,7 @@ class RegistrationForm extends Component {
           You will receive an email which details whether you have been approved
           or not.
         </p>
-        <button>Back to login</button>
+        <NavLink to="/login">Back to login</NavLink>
       </div>
     ) : (
       <div>
