@@ -1,6 +1,11 @@
 import { NavLink } from "react-router-dom";
 import "./Sidebar/Sidebar.scss";
 
+function logOut() {
+  sessionStorage.clear();
+  window.location.reload(false);
+}
+
 function Sidebar() {
   return (
     <nav>
@@ -63,7 +68,7 @@ function Sidebar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to={"/logout"}>
+          <NavLink to="/" onClick={logOut}>
             <img
               className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/end.svg"}
