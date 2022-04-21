@@ -28,7 +28,7 @@ export default function BasicRouting() {
   return (
     <Router>
       <div>
-        <ul>
+        {/* <ul>
           <li>
             <NavLink to="/">Dashboard</NavLink>
           </li>
@@ -67,7 +67,7 @@ export default function BasicRouting() {
           </li>
         </ul>
 
-        <hr />
+        <hr /> */}
 
         <Routes>
           <Route
