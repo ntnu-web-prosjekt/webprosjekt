@@ -24,7 +24,7 @@ class LoginForm extends React.Component {
             <p>Password</p>
             <input
               onChange={(e) => this.props.setPassword(e.target.value)}
-              type="text"
+              type="password"
               name="password"
               id="password"
               className="inputField"

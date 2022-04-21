@@ -42,6 +42,18 @@ class RegistrationForm extends Component {
       case "repeatPassword":
         this.setState({ repeatPassword: event.target.value });
         break;
+      case "tags":
+        this.setState({ tags: event.target.value });
+        break;
+      case "description":
+        this.setState({ description: event.target.value });
+        break;
+      case "title":
+        this.setState({ title: event.target.value });
+        break;
+      case "university":
+        this.setState({ university: event.target.value });
+        break;
 
       default:
         console.error(
@@ -53,10 +65,48 @@ class RegistrationForm extends Component {
     }
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    this.setState({ formIndex: this.state.formIndex + 1 });
+  async registerUser(credentials) {
+    var returnData;
+    fetch("http://localhost:5000/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(credentials),
+    }).then((data) => (returnData = data));
+    return returnData;
   }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    if (
+      this.state.formIndex === 1 &&
+      this.state.password !== this.state.repeatPassword
+    )
+      alert("Password must be identical!");
+    else this.setState({ formIndex: this.state.formIndex + 1 });
+  };
+
+  registerSubmit = async (event) => {
+    event.preventDefault();
+    this.handleSubmit(event);
+    var registerData = {
+      name: {
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+      },
+      email: this.state.email,
+      phone: this.state.phone,
+      password: this.state.password,
+      degree: this.state.title,
+      university: this.state.university,
+      tags: this.state.tags,
+      description: this.state.description,
+    };
+    console.log("Sending register-data");
+    const registerStatus = await this.registerUser(registerData);
+    if (registerStatus) this.setState({ registerStatus: registerStatus });
+  };
 
   render() {
     return this.state.formIndex === 1 ? (
@@ -91,8 +141,7 @@ class RegistrationForm extends Component {
             <input
               type="tel"
               name="phone"
-              placeholder="+47 123 45 678"
-              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+              placeholder="123 45 678"
               value={this.state.phone}
               onChange={this.handleChange}
             />
@@ -171,7 +220,7 @@ class RegistrationForm extends Component {
     ) : this.state.formIndex === 3 ? (
       <div>
         <h1>Request an account (step 3/3)</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.registerSubmit}>
           <label>
             Tags
             <br />
@@ -197,7 +246,8 @@ class RegistrationForm extends Component {
           <input type="submit" value="Next" />
         </form>
       </div>
-    ) : (
+    ) : this.state.formIndex === 4 &&
+      this.state.registerStatus === "success" ? (
       <div>
         <h1>Thank you for registrating!</h1>
         <p>
@@ -207,6 +257,11 @@ class RegistrationForm extends Component {
           or not.
         </p>
         <button>Back to login</button>
+      </div>
+    ) : (
+      <div>
+        <h1>Waiting for a response from the server...</h1>
+        <h2>Current status: {this.state.registerStatus}</h2>
       </div>
     );
   }

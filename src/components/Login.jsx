@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 
 async function loginUser(credentials) {
+  console.log("Started login");
   return fetch("http://localhost:5000/login", {
     method: "POST",
     headers: {
@@ -18,19 +19,21 @@ async function loginUser(credentials) {
 // End Auth
 
 export default function Login({ setToken }) {
-  var passwordHash = require("password-hash");
+  // var passwordHash = require("password-hash");
   // Start Auth
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    var hashedPassword = passwordHash.generate(password);
-    const token = await loginUser({
-      username,
-      hashedPassword,
-    });
-    setToken(token);
+    // var hashedPassword = passwordHash.generate(password);
+    var credentials = {
+      username: username,
+      password: password,
+    };
+    const token = await loginUser(credentials);
+    if (token === "Fail") alert("Incorrect username or password");
+    else setToken(token);
   };
   // End Auth
 
