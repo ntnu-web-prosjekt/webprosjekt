@@ -138,11 +138,7 @@ export default function BasicRouting() {
             element={!token ? <Navigate to="/" /> : <RequestInfo />}
           ></Route>
 
-          <Route
-            exact
-            path="/about"
-            element={!token ? <Navigate to="/" /> : <About />}
-          ></Route>
+          <Route exact path="/about" element={<About />}></Route>
         </Routes>
       </div>
     </Router>

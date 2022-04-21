@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 class LoginForm extends React.Component {
   render() {
@@ -35,7 +36,9 @@ class LoginForm extends React.Component {
         <a href="test" id="forgot">
           Forgot password?
         </a>
-        <button className="request">Request user account</button>
+        <NavLink to="/registration" className="request">
+          Request user account
+        </NavLink>
       </div>
     );
   }
