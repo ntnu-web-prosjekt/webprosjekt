@@ -68,7 +68,7 @@ function Sidebar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/" onClick={logOut}>
+          <NavLink to="/login" onClick={logOut}>
             <img
               className="icon"
               src={process.env.PUBLIC_URL + "img/menu-icons/end.svg"}
