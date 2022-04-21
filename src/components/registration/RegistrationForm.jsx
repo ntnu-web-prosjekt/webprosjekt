@@ -246,8 +246,7 @@ class RegistrationForm extends Component {
           <input type="submit" value="Next" />
         </form>
       </div>
-    ) : this.state.formIndex === 4 &&
-      this.state.registerStatus === "success" ? (
+    ) : this.state.formIndex === 4 ? (
       <div>
         <h1>Thank you for registrating!</h1>
         <p>
