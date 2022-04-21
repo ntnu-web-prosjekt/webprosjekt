@@ -18,7 +18,6 @@ export default class UserEntry extends Component {
         </td>
         <td>{this.props.university}</td>
         <td>{this.props.degree}</td>
-        <td>{this.props.fullfilledReqs}</td>
         <td>{this.props.tags}</td>
       </tr>
     );

@@ -1,0 +1,23 @@
+.sidebar {
+    position: fixed;
+}
+.findUser-page {
+    display: grid;
+    gap: 64px;
+    grid-template-columns: auto auto;
+}
+.FindUser {
+    margin-left: 450px;
+}
+.request {
+    width: 500px;
+    height: 600px;
+    background-color: #171e2e;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
