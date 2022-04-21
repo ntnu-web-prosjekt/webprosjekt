@@ -67,7 +67,7 @@ class RegistrationForm extends Component {
 
   async registerUser(credentials) {
     var returnData;
-    fetch(process.env.API_URL + "/register", {
+    fetch(process.env.REACT_APP_API_URL + "/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

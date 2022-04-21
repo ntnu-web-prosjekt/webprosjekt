@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./sass/main.scss";
 import App from "./basicRouter";
 import reportWebVitals from "./reportWebVitals";
-require("dotenv").config(".env");
+require("dotenv").config();
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
