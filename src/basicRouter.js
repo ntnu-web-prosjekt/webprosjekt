@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
   NavLink,
 } from "react-router-dom";
 
@@ -23,11 +24,6 @@ import useToken from "./components/token/useToken";
 export default function BasicRouting() {
   // Start Auth
   const { token, setToken } = useToken();
-
-  if (!token) {
-    return <Login setToken={setToken} />;
-  }
-  // End Auth
 
   return (
     <Router>
@@ -74,33 +70,79 @@ export default function BasicRouting() {
         <hr />
 
         <Routes>
-          <Route exact path="/" element={<Dashboard />}></Route>
+          <Route
+            exact
+            path="/"
+            element={!token ? <Navigate to="/login" /> : <Dashboard />}
+          ></Route>
 
           <Route
             exact
             path="/login"
-            element={<Login setToken={setToken} />}
+            element={
+              token ? <Navigate to="/" /> : <Login setToken={setToken} />
+            }
           ></Route>
 
-          <Route exact path="/myRequests" element={<MyRequests />}></Route>
+          <Route
+            exact
+            path="/myRequests"
+            element={!token ? <Navigate to="/login" /> : <MyRequests />}
+          ></Route>
 
-          <Route exact path="/inbox" element={<Inbox />}></Route>
+          <Route
+            exact
+            path="/inbox"
+            element={!token ? <Navigate to="/" /> : <Inbox />}
+          ></Route>
 
-          <Route exact path="/profile" element={<Profile />}></Route>
+          <Route
+            exact
+            path="/profile"
+            element={!token ? <Navigate to="/" /> : <Profile />}
+          ></Route>
 
-          <Route exact path="/settings" element={<Settings />}></Route>
+          <Route
+            exact
+            path="/settings"
+            element={!token ? <Navigate to="/" /> : <Settings />}
+          ></Route>
 
-          <Route exact path="/userProfile" element={<UserProfile />}></Route>
+          <Route
+            exact
+            path="/userProfile"
+            element={!token ? <Navigate to="/" /> : <UserProfile />}
+          ></Route>
 
-          <Route exact path="/findUser" element={<FindUser />}></Route>
+          <Route
+            exact
+            path="/findUser"
+            element={!token ? <Navigate to="/" /> : <FindUser />}
+          ></Route>
 
-          <Route exact path="/registration" element={<Registration />}></Route>
+          <Route
+            exact
+            path="/registration"
+            element={token ? <Navigate to="/" /> : <Registration />}
+          ></Route>
 
-          <Route exact path="/catalogue" element={<Catalogue />}></Route>
+          <Route
+            exact
+            path="/catalogue"
+            element={!token ? <Navigate to="/" /> : <Catalogue />}
+          ></Route>
 
-          <Route exact path="/requestInfo" element={<RequestInfo />}></Route>
+          <Route
+            exact
+            path="/requestInfo"
+            element={!token ? <Navigate to="/" /> : <RequestInfo />}
+          ></Route>
 
-          <Route exact path="/about" element={<About />}></Route>
+          <Route
+            exact
+            path="/about"
+            element={!token ? <Navigate to="/" /> : <About />}
+          ></Route>
         </Routes>
       </div>
     </Router>
