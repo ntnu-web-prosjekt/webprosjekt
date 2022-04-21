@@ -8,7 +8,7 @@ import React, { useState } from "react";
 
 async function loginUser(credentials) {
   console.log("Started login");
-  return fetch("http://localhost:5000/login", {
+  return fetch(process.env.API_URL + "/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
