@@ -1,0 +1,7 @@
+.User-entry-name {
+    text-decoration: underline;
+    &:hover {
+        cursor: pointer;
+        color: rgb(26, 213, 246);
+    }
+}
