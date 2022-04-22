@@ -15,7 +15,7 @@ function KeyInfo(props) {
                 </li>
                 <li className="keyinfo__list__el">
                     <img class="keyinfo__list__el__icon" src={process.env.PUBLIC_URL + 'img/request-icons/bank2.svg'} alt="icon"/>
-                    Subject level: <span className="keyinfo__list__el__sub">{props.request.level}</span>
+                    Subject level: <span className="keyinfo__list__el__sub">{props.request.subjectLevel}</span>
                 </li>
                 <li className="keyinfo__list__el">
                     <img class="keyinfo__list__el__icon" src={process.env.PUBLIC_URL + 'img/request-icons/mortarboard-fill.svg'} alt="icon"/>
@@ -23,7 +23,7 @@ function KeyInfo(props) {
                 </li>
                 <li className="keyinfo__list__el">
                     <img class="keyinfo__list__el__icon" src={process.env.PUBLIC_URL + 'img/request-icons/link.svg'} alt="icon"/>
-                    URL: <span className="keyinfo__list__el__sub"><a href={`${props.request.url}`} target="_blank" rel="noreferrer">{props.request.url}</a></span>
+                    URL: <span className="keyinfo__list__el__sub"><a href={`${props.request.subjectUrl}`} target="_blank" rel="noreferrer">{props.request.url}</a></span>
                 </li>
             </ul>
         </div>

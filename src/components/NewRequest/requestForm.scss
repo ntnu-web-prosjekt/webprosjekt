@@ -1,0 +1,84 @@
+@import "../../sass/abstracts/_colors";
+
+.requestForm {
+    background-color: $DarkContainerBackgroundColor;
+    border-radius: 5px;
+    padding: 2rem;
+
+    label {
+        display: block;
+        margin-top: 1.5rem;
+    }
+
+    input, textarea, select {
+        display: block;
+        border: none;
+        border-radius: 3px;
+        padding: 0.5rem;
+        background-color: rgb(13, 22, 33);
+        color: white;
+        font-size: 16px;
+        margin-top: 0.7rem;
+    }
+
+    .info {
+        display: block;
+        font-size: smaller;
+        font-weight: 200;
+        margin-top: .7rem;
+    }
+
+    .start-date, .end-date {
+        display: inline-block;
+    }
+
+    .start-date {
+        margin-right: 2rem;
+    }
+
+    .publish-btn {
+        background-color: rgb(58, 123, 251);
+        border-radius: 10px;
+        height: 40px;
+        padding: 0 2rem;
+        margin-top: 2rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .form-header:not(:first-child) {
+        margin-top: 2rem;
+    }
+
+    .form-header {
+        padding-bottom: .5rem;
+        border-bottom: 2px dotted whitesmoke;
+    }
+
+    .gen-tags {    
+        &__list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 1rem;
+            max-width: 40ch;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+    
+            li{
+                list-style: none;
+                background-color: $DarkTagsColor;
+                margin-right: 1rem;
+                padding: 10px 20px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+// Inverting the colour of the Chrome date picker icon
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

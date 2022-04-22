@@ -15,7 +15,9 @@ import Profile from "./components/Profile";
 import Registration from "./components/Registration";
 import Settings from "./components/Settings";
 import MyRequests from "./components/MyRequests";
+import RequestForm from "./components/NewRequest/RequestForm"
 import RequestInfo from "./components/RequestInfo";
+import UpdateRequest from "./components/UpdateRequest/UpdateRequest";
 import UserProfile from "./components/Profile";
 
 export default function basicRouting() {
@@ -65,6 +67,10 @@ export default function basicRouting() {
           <Route exact path="/myRequests" element={<MyRequests />}></Route>
 
           <Route exact path ="/request/:_id" element={<RequestInfo />}></Route>
+
+          <Route exact path ="/create" element={<RequestForm />}></Route>
+
+          <Route exact path ="/edit/:_id" element={<UpdateRequest />}></Route>
 
           <Route exact path="/inbox" element={<Inbox />}></Route>
 

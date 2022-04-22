@@ -25,8 +25,8 @@ class UsersCurrentReq extends React.Component {
                 <div >
                     <div className='abovetable'>
                         <h2 className='justify_start'>Own requests</h2>
-                        <button className='above_button'>New request</button>
-                        <button className='above_button'>Inbox</button>
+                        <Link className='above_button' to={`/create`}>Create request</Link>
+                        <Link className='above_button' to={`/inbox`}>Inbox</Link>
                     </div>
                     <table className='table'>
                         <thead className='tablehead'>
@@ -44,10 +44,10 @@ class UsersCurrentReq extends React.Component {
                                 <tr key={request._id}>
                                     <td>{request.startDate}</td>
                                     <td>{request.endDate}</td>
-                                    <td>{request.name}</td>
+                                    <td>{request.subjectName}</td>
                                     <td>None yet...</td>
                                     {/* Passes request id as a prop when trying to view request */}
-                                    <td><Link to={`/request/${request._id}`}>View</Link> <a href="">Edit</a></td>
+                                    <td><Link to={`/request/${request._id}`}>View</Link> <Link to={`/edit/${request._id}`}>Edit</Link></td>
                                 </tr>
                             ))}
                         </tbody>

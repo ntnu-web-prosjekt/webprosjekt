@@ -7,7 +7,7 @@ function GeneralInfo(props) {
         <div className="general">
             <div className="gen-info">
                 <span className="gen-info__title">Subject</span>
-                <span className="gen-info__desc">{props.request.name}</span>
+                <span className="gen-info__desc">{props.request.subjectName}</span>
                 <div className="gen-info__dates">
                     <div>
                         <span className="gen-info__title">Starts</span>

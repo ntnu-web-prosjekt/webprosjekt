@@ -5,10 +5,12 @@ import Sidebar from "./Sidebar";
 
 function Inbox() {
   return (
-    <div className="Login">
+    <div className="flexrow">
       <Sidebar />
-      <HelpReq />
-      <OfferReq />
+      <div className="requests">
+        <HelpReq />
+        <OfferReq />
+      </div>
     </div>
   );
 }
