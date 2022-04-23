@@ -1,8 +1,8 @@
 import "./requestForm.scss";
 import React from "react";
+import { Navigate } from "react-router-dom";
 
 class RequestForm extends React.Component {
-
     constructor(props) {
         super(props);
 
@@ -16,7 +16,9 @@ class RequestForm extends React.Component {
             start_date: "",
             end_date: "",
             location: "",
-            required_level: ""
+            required_level: "",
+            ownerID: 1,
+            redirect: false
           };
 
         this.handleChange = this.handleChange.bind(this);
@@ -71,39 +73,53 @@ class RequestForm extends React.Component {
     
     // Handling form subbmission
     handleSubmit(event) {
-        alert('Form was submitted!');
-        console.log(this.state);
-        // this.addRequest();
         event.preventDefault();
+        this.addRequest();
+        // Redirect to requests page
+       
+
+        
     }
 
-    // Adds the submitted request to the DB
-    addRequest(){
-        const requestData = {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              subject_name: this.state.subject_name,
-              subject_code: this.state.subject_code,
-              subject_url: this.state.subject_url,
-              tags: this.state.tags,
-              description: this.state.description,
-              start_date: this.state.start_date,
-              end_date: this.state.end_date,
-              location: this.state.location,
-              required_level: this.state.required_level,
-              requested_by: "MUST RETRIEVE THE EMAIL OF THE LOGGED IN USER HERE"
-            })
+    // Adding request to the database
+    addRequest() {
+        const API_HOST = process.env.REACT_APP_API_URL;
+        const request = {
+            subjectName: this.state.subject_name,
+            subjectCode: this.state.subject_code,
+            subjectUrl: this.state.subject_url,
+            subjectLevel: this.state.subject_level,
+            tags: this.state.tags,
+            description: this.state.description,
+            startDate: this.state.start_date,
+            endDate: this.state.end_date,
+            location: this.state.location,
+            examinatorLevel: this.state.required_level,
+            ownerID: this.state.ownerID
         };
 
-        fetch("URL GOES HERE", requestData)
-        .then((response) => response.json())
-        .then((data) => {
-        // data
-      });
+        fetch(`${API_HOST}/requests/create`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(request)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            });
+            this.setState({redirect: true});
     }
+    
+    
 
     render() {
+        const redirect = this.state.redirect;
+        if (redirect) {
+            return <Navigate to="/myRequests" />;
+        }
+
         return (
             <div className="requestForm">
                 <form autoComplete="off" onSubmit={this.handleSubmit}>
