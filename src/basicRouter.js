@@ -20,6 +20,9 @@ import UserProfile from "./components/Profile";
 import RequestInfo from "./components/RequestInfo";
 import About from "./components/About";
 import useToken from "./components/token/useToken";
+import RequestForm from "./components/NewRequest/RequestForm"
+import UpdateRequest from "./components/UpdateRequest/UpdateRequest";
+
 
 export default function BasicRouting() {
   // Start Auth
@@ -134,9 +137,21 @@ export default function BasicRouting() {
 
           <Route
             exact
-            path="/requestInfo"
+            path ="/request/:_id"
             element={!token ? <Navigate to="/" /> : <RequestInfo />}
           ></Route>
+
+          <Route 
+            exact 
+            path ="/create" 
+            element={!token ? <Navigate to="/" /> : <RequestForm />}
+            ></Route>
+
+          <Route 
+            exact 
+            path ="/edit/:_id" 
+            element={!token ? <Navigate to="/" /> : <UpdateRequest />}
+            ></Route>
 
           <Route exact path="/about" element={<About />}></Route>
         </Routes>

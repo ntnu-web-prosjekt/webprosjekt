@@ -5,6 +5,12 @@
     margin: 4rem;
     display: flex;
     flex-direction: column;
+
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
 }
 
 .abovetable {
@@ -17,30 +23,12 @@
     margin-right: auto;
 }
 
-.above_button {
-    background: #3577FF;
-    color: $DarkTextColor;
-    width: 10vw;
-    margin-left: 1rem;
-    padding: 0.5rem 0;
-    font-size: 0.8em;
-    cursor: pointer;
-    transition: 0.5s;
-    border-radius: 10px;
-    border: none;
-}
-
-.above_button:hover {
-    background-color: #6197EE;
-    border-radius: 10px;
-
-}
-
-
 th, td {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
+    line-height: 1.2;
+    width: 10px;
   }
 
 .tablehead {
