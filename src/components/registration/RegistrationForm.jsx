@@ -203,9 +203,9 @@ class RegistrationForm extends Component {
               required
             >
               <option value="" disabled>Choose one...</option>
-              <option value="volvo">Professor</option>
-              <option value="saab">Associate professor</option>
-              <option value="mercedes">Doctor</option>
+              <option value="Professor">Professor</option>
+              <option value="Associate professor">Associate professor</option>
+              <option value="Doctor">Doctor</option>
             </select>
           </label>
           <label>
@@ -218,8 +218,8 @@ class RegistrationForm extends Component {
               required
             >
               <option value="" disabled>Choose one...</option>
-              <option value="volvo">NTNU</option>
-              <option value="saab">UIO</option>
+              <option value="NTNU">NTNU</option>
+              <option value="UIO">UIO</option>
             </select>
           </label>
           <input type="submit" value="Next" />
