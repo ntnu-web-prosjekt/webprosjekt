@@ -17,7 +17,7 @@ class RequestForm extends React.Component {
             end_date: "",
             location: "",
             required_level: "",
-            ownerID: 1,
+            ownerID: JSON.parse(sessionStorage.getItem("token"))._id,
             redirect: false
           };
 
@@ -95,7 +95,7 @@ class RequestForm extends React.Component {
             endDate: this.state.end_date,
             location: this.state.location,
             examinatorLevel: this.state.required_level,
-            ownerID: this.state.ownerID
+            ownerId: this.state.ownerID
         };
 
         fetch(`${API_HOST}/requests/create`, {
