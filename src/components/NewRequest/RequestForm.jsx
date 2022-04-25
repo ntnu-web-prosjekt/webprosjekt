@@ -137,10 +137,10 @@ class RequestForm extends React.Component {
                     <label htmlFor="slevel">Subject level*</label>
                     <select name="slevel" id="slevel" onChange={this.handleChange} defaultValue={'DEFAULT'} required>
                         <option value="DEFAULT" disabled>Choose one...</option>
-                        <option value="bachelor">Bachelor</option>
-                        <option value="master">Master</option>
-                        <option value="phd">Ph.d.</option>
-                        <option value="one-year">One-year programme</option>
+                        <option value="Bachelor">Bachelor</option>
+                        <option value="Master">Master</option>
+                        <option value="Ph.d.">Ph.d.</option>
+                        <option value="One-year programme">One-year programme</option>
                     </select>
                     
                     <label htmlFor="tags">Tags*</label>
@@ -180,9 +180,9 @@ class RequestForm extends React.Component {
                     <span className="info">Which education level does the second examinator need to possess?</span>
                     <select name="rlevel" id="rlevel" onChange={this.handleChange} defaultValue={'DEFAULT'} required>
                         <option value="DEFAULT" disabled>Choose one...</option>
-                        <option value="bachelor">Bachelor</option>
-                        <option value="master">Master</option>
-                        <option value="phd">Ph.d.</option>
+                        <option value="Bachelor">Bachelor</option>
+                        <option value="Master">Master</option>
+                        <option value="Ph.d.">Ph.d.</option>
                     </select>
     
                     <input className="publish-btn" type="submit" value="Publish request"/>
