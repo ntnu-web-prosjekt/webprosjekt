@@ -33,9 +33,6 @@ class LoginForm extends React.Component {
           </label>
           <input type="submit" name="login" id="login" value="Sign in" />
         </form>
-        <a href="test" id="forgot">
-          Forgot password?
-        </a>
         <NavLink to="/registration" className="request">
           Request user account
         </NavLink>
