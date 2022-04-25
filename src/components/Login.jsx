@@ -31,9 +31,12 @@ export default function Login({ setToken }) {
       username: username,
       password: password,
     };
-    const token = await loginUser(credentials);
-    if (token === "Fail") alert("Incorrect username or password");
-    else setToken(token);
+    try{
+      const token = await loginUser(credentials);
+      setToken(token);
+    } catch(e) {
+      alert("Incorrect username or password");
+    }
   };
   // End Auth
 
