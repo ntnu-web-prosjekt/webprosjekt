@@ -10,19 +10,19 @@ function About() {
       </p>
       <h2>Meet the creators</h2>
       <p className="creators">
-        <a target={"_blank"} href="https://github.com/SivertGullbergHansen">
+        <a target={"_blank"} rel="noreferrer" href="https://github.com/SivertGullbergHansen">
           Sivert Gullberg Hansen
         </a>
         <span className="material-icons">linear_scale</span>
-        <a target={"_blank"} href="https://github.com/henriklgntnu">
+        <a target={"_blank"} rel="noreferrer" href="https://github.com/henriklgntnu">
           Henrik Landgraff Granum
         </a>
         <span className="material-icons">linear_scale</span>
-        <a target={"_blank"} href="https://github.com/sivanmah">
+        <a target={"_blank"} rel="noreferrer" href="https://github.com/sivanmah">
           Sivan Sabir Mahmud
         </a>
         <span className="material-icons">linear_scale</span>
-        <a target={"_blank"} href="https://github.com/Magnumoe">
+        <a target={"_blank"} rel="noreferrer" href="https://github.com/Magnumoe">
           Magnus Moen
         </a>
       </p>
