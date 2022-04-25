@@ -1,26 +1,25 @@
 import "./UpcomingPendingReq.scss";
 
-function PendingReq() {
+function PendingReq(props) {
     return (
-        <div class="examinaton">
-            <h2 class="examinaton__heading">Pending examinator requests</h2>
+        <div className="examinaton">
+            <h2 className="examinaton__heading">Pending examinator requests</h2>
             <table>
+            <tbody>
+                {props.data ? props.data.map((item, index) => {
+                    return (
+                        <tr key={item.subjectName + index}>
+                            <th>{item.startDate.split("T")[0].replace(/-/g, "/")}</th>
+                            <td>{item.subjectName}</td>
+                        </tr>
+                    );
+                }) 
+                : 
                 <tr>
-                    <th>22.05.22</th>
-                    <td>Front-end Web Development</td>
-                </tr>
-                <tr>
-                    <th>24.05.22</th>
-                    <td>Advanced CSS</td>
-                </tr>
-                <tr>
-                    <th>02.06.22</th>
-                    <td>Back-end Web Development</td>
-                </tr>
-                <tr>
-                    <th>02.06.22</th>
-                    <td>Basics of HTML</td>
-                </tr>
+                    <th>Loading</th>
+                    <td>...</td>
+                </tr>}
+            </tbody>
             </table>
         </div>
 );
