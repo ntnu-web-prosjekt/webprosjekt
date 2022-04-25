@@ -123,6 +123,7 @@ class RegistrationForm extends Component {
               placeholder="First Name"
               value={this.state.firstName}
               onChange={this.handleChange}
+              required
             />
           </label>
           <label>
@@ -134,6 +135,7 @@ class RegistrationForm extends Component {
               placeholder="Last Name"
               value={this.state.lastName}
               onChange={this.handleChange}
+              required
             />
           </label>
           <label>
@@ -145,6 +147,7 @@ class RegistrationForm extends Component {
               placeholder="123 45 678"
               value={this.state.phone}
               onChange={this.handleChange}
+              required
             />
           </label>
           <label>
@@ -156,6 +159,7 @@ class RegistrationForm extends Component {
               placeholder="John@Doe.Com"
               value={this.state.email}
               onChange={this.handleChange}
+              required
             />
           </label>
           <label>
@@ -167,6 +171,7 @@ class RegistrationForm extends Component {
               placeholder="Password"
               value={this.state.password}
               onChange={this.handleChange}
+              required
             />
           </label>
           <label>
@@ -178,6 +183,7 @@ class RegistrationForm extends Component {
               placeholder="Repeat Password"
               value={this.state.repeatPassword}
               onChange={this.handleChange}
+              required
             />
           </label>
           <input type="submit" value="Next" />
@@ -194,6 +200,7 @@ class RegistrationForm extends Component {
               name="title"
               value={this.state.title}
               onChange={this.handleChange}
+              required
             >
               <option value="volvo">Volvo</option>
               <option value="saab">Saab</option>
@@ -208,6 +215,7 @@ class RegistrationForm extends Component {
               name="university"
               value={this.state.university}
               onChange={this.handleChange}
+              required
             >
               <option value="volvo">Volvo</option>
               <option value="saab">Saab</option>
@@ -231,6 +239,7 @@ class RegistrationForm extends Component {
               placeholder="Click to search..."
               value={this.state.tags}
               onChange={this.handleChange}
+              required
             />
           </label>
           <label>
@@ -242,6 +251,7 @@ class RegistrationForm extends Component {
               placeholder="A short text about you..."
               value={this.state.description}
               onChange={this.handleChange}
+              required
             />
           </label>
           <input type="submit" value="Next" />
