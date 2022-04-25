@@ -202,10 +202,10 @@ class RegistrationForm extends Component {
               onChange={this.handleChange}
               required
             >
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+              <option value="" disabled>Choose one...</option>
+              <option value="volvo">Professor</option>
+              <option value="saab">Associate professor</option>
+              <option value="mercedes">Doctor</option>
             </select>
           </label>
           <label>
@@ -217,10 +217,9 @@ class RegistrationForm extends Component {
               onChange={this.handleChange}
               required
             >
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+              <option value="" disabled>Choose one...</option>
+              <option value="volvo">NTNU</option>
+              <option value="saab">UIO</option>
             </select>
           </label>
           <input type="submit" value="Next" />
