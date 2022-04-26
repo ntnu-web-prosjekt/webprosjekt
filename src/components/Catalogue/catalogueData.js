@@ -1,6 +1,6 @@
 const requestURL = process.env.REACT_APP_API_URL + "/requests";
 
-module.exports = async function () {
+async function data() {
   var returnArray = await fetch(requestURL)
     .then((data) => data.json())
     .then((returnData) => {
@@ -17,4 +17,6 @@ module.exports = async function () {
       return returnJson;
     });
   return returnArray;
-};
+}
+
+export default data;
