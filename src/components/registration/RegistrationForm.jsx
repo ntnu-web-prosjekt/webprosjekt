@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 class RegistrationForm extends Component {
   constructor(props) {
@@ -197,6 +197,9 @@ class RegistrationForm extends Component {
             />
           </label>
           <input type="submit" className="aButton" value="Next Page" />
+          <Link to="/login" className="backButton">
+            Back to login
+          </Link>
         </form>
       </div>
     ) : this.state.formIndex === 2 ? (
@@ -231,6 +234,9 @@ class RegistrationForm extends Component {
             </select>
           </label>
           <input type="submit" className="aButton" value="Next Page" />
+          <Link to="/login" className="backButton">
+            Back to login
+          </Link>
         </form>
       </div>
     ) : this.state.formIndex === 3 ? (
@@ -265,6 +271,9 @@ class RegistrationForm extends Component {
             />
           </label>
           <input type="submit" className="aButton" value="Submit Request" />
+          <Link to="/login" className="backButton">
+            Back to login
+          </Link>
         </form>
       </div>
     ) : this.state.formIndex === 4 ? (
@@ -274,7 +283,9 @@ class RegistrationForm extends Component {
           Please wait for an administrator to approve your account. You will
           receive an email which details whether you have been approved or not.
         </p>
-        <NavLink to="/login">Back to login</NavLink>
+        <NavLink to="/login" className="backButton">
+          Back to login
+        </NavLink>
       </div>
     ) : (
       <div>

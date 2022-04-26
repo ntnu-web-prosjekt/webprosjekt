@@ -23,6 +23,10 @@
     justify-content: center;
     gap: 64px;
 
+    .backButton {
+      text-align: center;
+    }
+
     h1 {
       text-align: center;
     }
@@ -35,10 +39,5 @@
         gap: 8px;
       }
     }
-  }
-
-  textarea {
-    background-color: $DarkContainerBackgroundColor;
-    color: $DarkTextColor;
   }
 }
