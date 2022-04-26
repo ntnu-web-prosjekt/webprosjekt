@@ -14,7 +14,6 @@ export default class Sidebar extends Component {
     this.state = {
       notifications: false,
       active: -1,
-
     };
 
     this.checkForNotifications = this.checkForNotifications.bind(this);
@@ -77,7 +76,7 @@ export default class Sidebar extends Component {
                 src={process.env.REACT_APP_BASE_URL + "img/menu-icons/list.svg"}
                 alt="icon"
               />
-              Requests{" "}
+              My Requests{" "}
               {this.state.notifications !== false ? (
                 <span className="alert">!!</span>
               ) : (

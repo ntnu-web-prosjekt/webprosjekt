@@ -1,3 +1,4 @@
+@import "../../sass/abstracts/_colors.scss";
 .sidebar {
   position: fixed;
 }
@@ -20,7 +21,36 @@
     align-items: center;
     justify-content: space-evenly;
   }
-  #usersTable {
-    width: auto;
+}
+
+table {
+  width: 100%;
+  height: fit-content;
+  font-size: 20px;
+
+  thead {
+    background-color: $DarkAccent;
+    height: 50px;
+    text-align: left;
+    line-height: 55px;
+    tr {
+      th {
+        padding: 5px;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      height: 55px;
+      line-height: 50px;
+      td {
+        padding: 5px;
+      }
+
+      &:nth-child(2n) {
+        background-color: $DarkContainerBackgroundColor;
+      }
+    }
   }
 }
