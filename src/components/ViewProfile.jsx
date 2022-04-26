@@ -29,16 +29,16 @@ export default class ViewProfile extends Component {
   render() {
     if (this.state.user.name) {
       return (
-        <div className="profile-page">
-          <div className="sidebar">
+        <div className="page">
             <Sidebar />
-          </div>
-          <div className="Profile">
+          <div className="pageContent Profile">
             <ProfileInfo {...this.state.user} />
+            <div>
             <Tags {...this.state.user} />
             <AboutMe {...this.state.user} />
             <PendingReq {...this.state.user} />
             <MyReview {...this.state.user} />
+            </div>
           </div>
         </div>
       );

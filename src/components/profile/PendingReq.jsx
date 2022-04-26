@@ -28,7 +28,7 @@ export default class PendingReq extends Component {
           {this.state.pendingReq.map((pendingReq, index) => {
             return (
               <li key={index}>
-                <span>{pendingReq}</span>
+                <span>{pendingReq.subjectName}</span>
               </li>
             );
           })}
