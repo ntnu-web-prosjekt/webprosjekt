@@ -24,7 +24,8 @@ function UpdateRequest() {
     }, [params._id]);
 
     const updateRequest = (event) => {
-        const req = `http://localhost:5000/requests/update/${params._id}`;
+        const API_HOST = process.env.REACT_APP_API_URL;
+        const req = `${API_HOST}/requests/update/${params._id}`;
         const fetchRequest = async () => {
             try {
                 const response = await fetch(req, {
