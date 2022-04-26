@@ -44,7 +44,14 @@ class RegistrationForm extends Component {
         this.setState({ repeatPassword: event.target.value });
         break;
       case "tags":
-        this.setState({ tags: event.target.value });
+        // Refers the whole string
+        const tags = event.target.value;
+
+        // Splitting string, and removes array elements which are empty
+        const tagsArray = tags.split(",").map(tag => tag.trim()).filter((tagWithoutEmptySpace) => tagWithoutEmptySpace);
+
+        // Setting the state
+        this.setState({ tags: tagsArray });
         break;
       case "description":
         this.setState({ description: event.target.value });
@@ -230,28 +237,14 @@ class RegistrationForm extends Component {
         <h1>Request an account (step 3/3)</h1>
         <form onSubmit={this.registerSubmit}>
           <label>
-            Tags
+            Tags (separate by comma)
             <br />
-            <input
-              type="text"
-              name="tags"
-              placeholder="Click to search..."
-              value={this.state.tags}
-              onChange={this.handleChange}
-              required
-            />
+            <textarea id="tags" name="tags" rows="4" cols="60" onChange={this.handleChange} placeholder="Type here..." required/>
           </label>
           <label>
             Your Description
             <br />
-            <input
-              type="text"
-              name="description"
-              placeholder="A short text about you..."
-              value={this.state.description}
-              onChange={this.handleChange}
-              required
-            />
+            <textarea id="description" name="description" rows="4" cols="60" onChange={this.handleChange} value={this.state.description} placeholder="A short text about you..." required/>
           </label>
           <input type="submit" value="Next" />
         </form>
