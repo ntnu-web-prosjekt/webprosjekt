@@ -1,14 +1,10 @@
 @import "../../sass/base/_typography";
 @import "../../sass/abstracts/_colors";
 
-.flexrow {
-  display: flex;
-  flex-direction: row;
-
+.requestsPage {
   .requests {
     display: flex;
     flex-direction: column;
-    width: 100vw;
     margin: 4rem;
   }
 
@@ -61,6 +57,7 @@
     border-radius: 10px;
     overflow: hidden;
     background-color: #171e2e;
+    width: 100%;
   }
 
   .table td,
