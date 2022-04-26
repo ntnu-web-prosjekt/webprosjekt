@@ -1,11 +1,11 @@
 .dashboard {
-  margin: 100px;
+  padding: 100px;
   display: grid;
-  gap: 64px;
-  grid-template-rows: auto auto;
+  grid-template-rows: max-content auto;
+  grid-gap: 50px;
 }
 
-.requests {
+.requests-dash {
   display: flex;
   gap: 24px;
 }
