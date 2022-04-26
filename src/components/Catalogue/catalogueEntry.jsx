@@ -10,11 +10,11 @@ export default class catalogueEntry extends Component {
   handleView = (e) => {
     // redirect to view
 
-    window.location.href = "/request/" + this.props._id;
+    window.location.href = "/request/" + this.props.data._id;
   };
   handleEdit = (e) => {
     // redirect to edit
-    window.location.href = "/edit/" + this.props._id;
+    window.location.href = "/edit/" + this.props.data._id;
   };
   render() {
     return (
