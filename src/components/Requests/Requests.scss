@@ -1,10 +1,10 @@
 @import "../../sass/base/_typography";
 @import "../../sass/abstracts/_colors";
 
-.request-overview {
+.requestsPage {
+  .requests {
     display: flex;
     flex-direction: column;
-    width: 70vw;
     margin: 4rem;
 }
 
@@ -66,3 +66,18 @@
     width: 10px;
   }
 
+  .tablehead {
+    background-color: #3577ff;
+  }
+  .table {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #171e2e;
+    width: 100%;
+  }
+
+  .table td,
+  .table th {
+    padding: 8px;
+  }
+}

@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 
 function MyRequests() {
   return (
-    <div className="flexrow">
+    <div className="page requestsPage">
       <Sidebar />
       <div className="request-overview">
         <UsersCurrentReq />
