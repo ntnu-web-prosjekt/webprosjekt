@@ -26,7 +26,7 @@ export default class FindUser extends Component {
         </div>
         <div className="FindUser">
           <h1>Find Users</h1>
-          <div className="requests">
+          <div className="requests" id="usersTable">
             <table>
               <thead>
                 <tr>
