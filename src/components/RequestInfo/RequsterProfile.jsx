@@ -18,7 +18,7 @@ function RequesterProfile() {
             </span>
           </h2>
           <img
-            src={process.env.PUBLIC_URL + "img/profile2.png"}
+            src={process.env.REACT_APP_BASE_URL + "img/profile2.png"}
             alt="Users profile"
           />
         </div>

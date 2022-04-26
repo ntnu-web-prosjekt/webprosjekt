@@ -15,7 +15,7 @@ function WelcomeUser(props) {
             </span>
           </h2>
           <img
-            src={process.env.PUBLIC_URL + "img/profile.png"}
+            src={process.env.REACT_APP_BASE_URL + "img/profile.png"}
             alt="Users profile"
           />
         </div>

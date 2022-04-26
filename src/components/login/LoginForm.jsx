@@ -6,7 +6,7 @@ class LoginForm extends React.Component {
     return (
       <div className="loginform">
         <img
-          src={process.env.PUBLIC_URL + "img/logo.svg"}
+          src={process.env.REACT_APP_BASE_URL + "img/logo.svg"}
           alt="Logo"
           id="logo"
         />

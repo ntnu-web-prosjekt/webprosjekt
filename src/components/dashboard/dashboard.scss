@@ -3,9 +3,9 @@
   display: grid;
   grid-template-rows: max-content auto;
   grid-gap: 50px;
-}
 
-.requests-dash {
-  display: flex;
-  gap: 24px;
+  .requests-dash {
+    display: flex;
+    gap: 24px;
+  }
 }

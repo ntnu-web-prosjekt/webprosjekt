@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
   
 
 const API_HOST = process.env.REACT_APP_API_URL;
-const REQUESTS_API_URL = `${API_HOST}/requests`;
+const REQUESTS_API_URL = `${API_HOST}/requests/${JSON.parse(sessionStorage.getItem("token"))._id}`;
 
 
 class UsersCurrentReq extends React.Component {
@@ -28,8 +28,8 @@ class UsersCurrentReq extends React.Component {
                         <Link className='above_button' to={`/create`}>Create request</Link>
                         <Link className='above_button' to={`/inbox`}>Inbox</Link>
                     </div>
-                    <table className='table'>
-                        <thead className='tablehead'>
+                    <table className='request-table'>
+                        <thead className='request-tablehead'>
                         <tr>
                             <th>Start date</th>
                             <th>End date</th>

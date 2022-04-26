@@ -96,11 +96,11 @@
     );
     cursor: pointer;
     background-size: 200% auto;
+    transition: background-position 0.5s;
   }
 
   #login:hover {
     background-position: right center;
-    transition: 0.5s;
   }
 
   .inputField {

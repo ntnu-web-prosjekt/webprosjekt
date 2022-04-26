@@ -1,10 +1,10 @@
 @import "../../sass/base/_typography";
 @import "../../sass/abstracts/_colors";
 
-.requests {
+.requestsPage {
+  .requests {
     display: flex;
     flex-direction: column;
-    width: 100vw;
     margin: 4rem;
 }
 
@@ -47,26 +47,37 @@
 
 }
 
+.request-tablehead {
+    background-color: #3577FF;
+}
+.request-table {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #171E2E;
+    margin-bottom: 2rem;
+  }
 
-th, td {
+.request-table td, .request-table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     line-height: 1.2;
     width: 10px;
-
   }
 
-.tablehead {
-    background-color: #3577FF;
-}
-.table {
+  .tablehead {
+    background-color: #3577ff;
+  }
+  .table {
     border-radius: 10px;
     overflow: hidden;
-    background-color: #171E2E;
+    background-color: #171e2e;
+    width: 100%;
   }
 
-.table td, .table th {
+  .table td,
+  .table th {
     padding: 8px;
   }
-
+}
