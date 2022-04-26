@@ -10,7 +10,7 @@ export default class Dashboard extends Component {
     super(props);
 
     this.state = {
-      waitingForReply: true,
+      waitingForReply: false,
       pendingRequests: null,
       upcomingRequests: null,
     };
