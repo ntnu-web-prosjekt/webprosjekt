@@ -18,9 +18,8 @@ export default class ProfileInfo extends Component {
   render() {
     return (
       <div>
-        <h2>My Profile</h2>
         <div className="profile-info">
-          <img src="https://via.placeholder.com/200" alt="placeholder" />
+          <img src={process.env.PUBLIC_URL + "img/profile.png"} alt="placeholder" />
           <h3>
             {this.state.profileFirstName} {this.state.profileLastName}
           </h3>
