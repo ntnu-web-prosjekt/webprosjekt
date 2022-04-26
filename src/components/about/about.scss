@@ -6,28 +6,28 @@
   justify-items: center;
   gap: 128px;
   margin: 0 auto;
-}
-.aboutContainer {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  gap: 24px;
-}
-.creators {
-  display: flex;
-  gap: 24px;
-  height: 24px;
+  .aboutContainer {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .creators {
+    display: flex;
+    gap: 24px;
+    height: 24px;
 
-  p,
-  span {
-    font-size: 24px;
-    vertical-align: middle;
+    p,
+    span {
+      font-size: 24px;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+
+  .para {
+    max-width: 75ch;
+    line-height: 24px;
     text-align: center;
   }
-}
-
-.para {
-  max-width: 75ch;
-  line-height: 24px;
-  text-align: center;
 }
