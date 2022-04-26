@@ -42,6 +42,7 @@ export default class FindUser extends Component {
                       <UserEntry
                         key={user._id}
                         className="userEntry"
+                        id={user._id}
                         name={user.name.firstName + " " + user.name.lastName}
                         university={user.university}
                         degree={user.degree}

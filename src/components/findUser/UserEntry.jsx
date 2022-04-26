@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./userEntry.scss";
 
 export default class UserEntry extends Component {
@@ -14,7 +15,7 @@ export default class UserEntry extends Component {
     return (
       <tr>
         <td className="User-entry-name" onClick={this.handleClick}>
-          {this.props.name}
+          <Link to={"/users/" + this.props.id}>{this.props.name}</Link>
         </td>
         <td>{this.props.university}</td>
         <td>{this.props.degree}</td>
