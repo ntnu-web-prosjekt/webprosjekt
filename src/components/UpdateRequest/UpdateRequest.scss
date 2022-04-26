@@ -1,0 +1,10 @@
+#delete-btn {
+    background-color: rgb(202, 1, 1) !important;
+    height: 40px;
+    padding: 0 2rem;
+    border-radius: 10px;
+    &:hover {
+        background-color: rgb(135, 0, 0) !important;
+        cursor: pointer;
+    }
+}
