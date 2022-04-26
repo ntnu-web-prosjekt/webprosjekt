@@ -14,7 +14,7 @@ export default class Requests extends Component {
 
   render() {
     return (
-      <div className="requests">
+      <div className="catalogueRequests">
         <table>
           <thead>
             <tr>
