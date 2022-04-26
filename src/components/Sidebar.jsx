@@ -56,7 +56,7 @@ export default class Sidebar extends Component {
             </NavLink>
           
           
-            <NavLink to={"myRequests"}>
+            <NavLink to={"/myRequests"}>
               <li>
               <img
                 className="icon"
