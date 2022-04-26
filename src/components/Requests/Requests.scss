@@ -1,30 +1,29 @@
 @import "../../sass/base/_typography";
 @import "../../sass/abstracts/_colors";
 
-.requests {
+.flexrow {
+  display: flex;
+  flex-direction: row;
+
+  .requests {
     display: flex;
     flex-direction: column;
     width: 100vw;
     margin: 4rem;
-}
+  }
 
-.flexrow {
-    display: flex;
-    flex-direction: row;
-}
-
-.abovetable {
+  .abovetable {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 1rem;
-}
+  }
 
-.justify_start {
+  .justify_start {
     margin-right: auto;
-}
+  }
 
-.above_button {
-    background: #3577FF;
+  .above_button {
+    background: #3577ff;
     color: $DarkTextColor;
     width: 6vw;
     margin-left: 1rem;
@@ -39,34 +38,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.above_button:hover {
-    background-color: #6197EE;
+  .above_button:hover {
+    background-color: #6197ee;
     border-radius: 10px;
+  }
 
-}
-
-
-th, td {
+  th,
+  td {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     line-height: 1.2;
     width: 10px;
-
   }
 
-.tablehead {
-    background-color: #3577FF;
-}
-.table {
+  .tablehead {
+    background-color: #3577ff;
+  }
+  .table {
     border-radius: 10px;
     overflow: hidden;
-    background-color: #171E2E;
+    background-color: #171e2e;
   }
 
-.table td, .table th {
+  .table td,
+  .table th {
     padding: 8px;
   }
-
+}
