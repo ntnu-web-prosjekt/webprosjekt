@@ -6,49 +6,49 @@
   display: grid;
   gap: 10%;
   // grid-template-columns: 70% 20%;
-}
 
-.filter {
-  display: grid;
-  gap: 24px;
-  align-content: start;
+  .filter {
+    display: grid;
+    gap: 24px;
+    align-content: start;
 
-  .title {
-    background-color: $DarkAccent;
-    height: 35px;
-    text-align: center;
-  }
-}
-
-.catalogueRequests {
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  border-radius: 10px;
-
-  table {
-    width: 100%;
-    height: fit-content;
-    font-size: 20px;
-
-    thead {
+    .title {
       background-color: $DarkAccent;
-      height: 50px;
-      text-align: left;
-      line-height: 55px;
-      tr {
-        th {
-          padding: 5px;
+      height: 35px;
+      text-align: center;
+    }
+  }
+
+  .catalogueRequests {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    border-radius: 10px;
+
+    table {
+      width: 100%;
+      height: fit-content;
+      font-size: 20px;
+
+      thead {
+        background-color: $DarkAccent;
+        height: 50px;
+        text-align: left;
+        line-height: 55px;
+        tr {
+          th {
+            padding: 5px;
+          }
         }
       }
-    }
 
-    tbody {
-      tr {
-        height: 55px;
-        line-height: 50px;
-        td {
-          padding: 5px;
+      tbody {
+        tr {
+          height: 55px;
+          line-height: 50px;
+          td {
+            padding: 5px;
+          }
         }
       }
     }
