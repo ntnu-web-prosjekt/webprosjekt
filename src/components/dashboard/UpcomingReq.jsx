@@ -13,7 +13,7 @@ function UpcomingReq(props) {
           {props.data
             ? props.data.map((item, index) => {
 
-              // If todays date is "bigger" than the examination startDate, dont show the exam as upcoming
+              // If todays date is "smaller" than the examination startDate, the exam will be shown
               if(todaysDate >= item.startDate.split("T")[0].replace(/-/g, "/")) {
                 return (
                   <tr key={item.subjectName + index}>
