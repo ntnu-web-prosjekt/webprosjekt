@@ -3,8 +3,7 @@ nav {
   color: whitesmoke;
 
   height: 100vh;
-  max-width: 400px;
-  min-width: 350px;
+  width: 350px;
 
   display: flex;
   flex-direction: column;
@@ -49,7 +48,7 @@ nav {
       }
     }
 
-    .active {
+    .active > li {
       background-color: rgb(58, 123, 251);
       font-weight: bold;
     }

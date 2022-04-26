@@ -43,69 +43,81 @@ export default class Sidebar extends Component {
         </NavLink>
 
         <ul className="main-nav">
-          <li>
+          
             <NavLink to={"/"}>
+            <li>
               <img
                 className="icon"
                 src={process.env.PUBLIC_URL + "img/menu-icons/house.svg"}
                 alt="icon"
               />
               Dashboard
+              </li>
             </NavLink>
-          </li>
-          <li>
+          
+          
             <NavLink to={"myRequests"}>
+              <li>
               <img
                 className="icon"
                 src={process.env.PUBLIC_URL + "img/menu-icons/list.svg"}
                 alt="icon"
               />
               Requests {this.state.notifications !== false ? <span className="alert">!!</span> : false} 
+              </li>
             </NavLink>
-          </li>
-          <li>
+          
+          
             <NavLink to={"/catalogue"}>
+              <li>
               <img
                 className="icon"
                 src={process.env.PUBLIC_URL + "img/menu-icons/cata.svg"}
                 alt="icon"
               />
               Catalogue
+              </li>
             </NavLink>
-          </li>
-          <li>
+          
+          
             <NavLink to={"/findUser"}>
+              <li>
               <img
                 className="icon"
                 src={process.env.PUBLIC_URL + "img/menu-icons/magnify.svg"}
                 alt="icon"
               />
               Find User
+              </li>
             </NavLink>
-          </li>
+          
         </ul>
 
         <ul className="second-nav">
-          <li>
+          
             <NavLink to={"/profile"}>
+              <li>
               <img
                 className="icon"
                 src={process.env.PUBLIC_URL + "img/menu-icons/user.svg"}
                 alt="icon"
               />
               My Profile
+              </li>
             </NavLink>
-          </li>
-          <li>
+          
+          
             <NavLink to="/login" onClick={logOut}>
+              <li>
               <img
                 className="icon"
                 src={process.env.PUBLIC_URL + "img/menu-icons/end.svg"}
                 alt="icon"
               />
               Log Out
+              </li>
             </NavLink>
-          </li>
+          
         </ul>
       </nav>
     );
