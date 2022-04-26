@@ -8,12 +8,12 @@ function logOut() {
 }
 
 export default class Sidebar extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
-      notifications: false
-    }
+      notifications: false,
+    };
 
     this.checkForNotifications = this.checkForNotifications.bind(this);
   }
@@ -24,13 +24,15 @@ export default class Sidebar extends Component {
 
   // Retrieves the open and matched requests from back-end and updates the state
   checkForNotifications() {
-    const url = `${process.env.REACT_APP_API_URL}/dashboard/view/${JSON.parse(sessionStorage.getItem("token"))._id}`;
+    const url = `${process.env.REACT_APP_API_URL}/dashboard/view/${
+      JSON.parse(sessionStorage.getItem("token"))._id
+    }`;
 
     fetch(url)
-      .then(response => response.json())
-      .then(data => {       
+      .then((response) => response.json())
+      .then((data) => {
         this.setState({
-          notifications: data.waitingForReply
+          notifications: data.waitingForReply,
         });
       });
   }
@@ -39,85 +41,84 @@ export default class Sidebar extends Component {
     return (
       <nav>
         <NavLink to={"/"}>
-          <img src={process.env.PUBLIC_URL + "img/logo.svg"} alt="logo" />
+          <img src={process.env.PUBLIC_URL + "../../img/logo.svg"} alt="logo" />
         </NavLink>
 
         <ul className="main-nav">
-          
-            <NavLink to={"/"}>
+          <NavLink to={"/"}>
             <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/house.svg"}
+                src={process.env.PUBLIC_URL + "../../img/menu-icons/house.svg"}
                 alt="icon"
               />
               Dashboard
-              </li>
-            </NavLink>
-          
-          
-            <NavLink to={"/myRequests"}>
-              <li>
+            </li>
+          </NavLink>
+
+          <NavLink to={"/myRequests"}>
+            <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/list.svg"}
+                src={process.env.PUBLIC_URL + "../../img/menu-icons/list.svg"}
                 alt="icon"
               />
-              Requests {this.state.notifications !== false ? <span className="alert">!!</span> : false} 
-              </li>
-            </NavLink>
-          
-          
-            <NavLink to={"/catalogue"}>
-              <li>
+              Requests{" "}
+              {this.state.notifications !== false ? (
+                <span className="alert">!!</span>
+              ) : (
+                false
+              )}
+            </li>
+          </NavLink>
+
+          <NavLink to={"/catalogue"}>
+            <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/cata.svg"}
+                src={process.env.PUBLIC_URL + "../../img/menu-icons/cata.svg"}
                 alt="icon"
               />
               Catalogue
-              </li>
-            </NavLink>
-          
-          
-            <NavLink to={"/findUser"}>
-              <li>
+            </li>
+          </NavLink>
+
+          <NavLink to={"/findUser"}>
+            <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/magnify.svg"}
+                src={
+                  process.env.PUBLIC_URL + "../../img/menu-icons/magnify.svg"
+                }
                 alt="icon"
               />
               Find User
-              </li>
-            </NavLink>
-          
+            </li>
+          </NavLink>
         </ul>
 
         <ul className="second-nav">
-          
-            <NavLink to={"/profile"}>
-              <li>
+          <NavLink to={"/profile"}>
+            <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/user.svg"}
+                src={process.env.PUBLIC_URL + "../../img/menu-icons/user.svg"}
                 alt="icon"
               />
               My Profile
-              </li>
-            </NavLink>
-          
-          
-            <NavLink to="/login" onClick={logOut}>
-              <li>
+            </li>
+          </NavLink>
+
+          <NavLink to="/login" onClick={logOut}>
+            <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/end.svg"}
+                src={process.env.PUBLIC_URL + "../../img/menu-icons/end.svg"}
                 alt="icon"
               />
               Log Out
-              </li>
-            </NavLink>
-          
+            </li>
+          </NavLink>
         </ul>
       </nav>
     );

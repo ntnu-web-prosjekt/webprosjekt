@@ -21,6 +21,7 @@ import About from "./components/About";
 import useToken from "./components/token/useToken";
 import RequestForm from "./components/NewRequest/RequestForm";
 import UpdateRequest from "./components/UpdateRequest/UpdateRequest";
+import ViewProfile from "./components/ViewProfile";
 
 export default function BasicRouting() {
   // Start Auth
@@ -66,6 +67,12 @@ export default function BasicRouting() {
             exact
             path="/settings"
             element={!token ? <Navigate to="/" /> : <Settings />}
+          ></Route>
+
+          <Route
+            exact
+            path="/users/:id"
+            element={!token ? <Navigate to="/" /> : <ViewProfile />}
           ></Route>
 
           <Route
