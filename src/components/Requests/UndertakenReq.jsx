@@ -12,7 +12,7 @@ class UndertakenReq extends React.Component {
   }
 
   componentDidMount() {
-    const REQUESTS_API_URL = `${API_HOST}/check/${JSON.parse(sessionStorage.getItem("token"))._id}`;
+    const REQUESTS_API_URL = `${API_HOST}/requests/check/${JSON.parse(sessionStorage.getItem("token"))._id}`;
     fetch(REQUESTS_API_URL)
         .then(response => response.json())
         .then(data => this.setState({ requests: data }));
