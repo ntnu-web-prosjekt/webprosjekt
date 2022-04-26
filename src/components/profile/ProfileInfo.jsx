@@ -19,7 +19,7 @@ export default class ProfileInfo extends Component {
     return (
       <div>
         <div className="profile-info">
-          <img src={process.env.PUBLIC_URL + "img/profile.png"} alt="placeholder" />
+          <img src={process.env.PUBLIC_URL + "../img/profile.png"} alt="placeholder" />
           <h3>
             {this.state.profileFirstName} {this.state.profileLastName}
           </h3>
