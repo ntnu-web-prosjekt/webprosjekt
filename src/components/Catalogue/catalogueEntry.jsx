@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class catalogueEntry extends Component {
   constructor() {
@@ -23,11 +24,9 @@ export default class catalogueEntry extends Component {
         <td>{`${this.props.data.endDate.getDate()}.${this.props.data.endDate.getMonth()}.${this.props.data.endDate.getFullYear()}`}</td>
         <td>{this.props.data.subjectName}</td>
         <td>
-          <button onClick={this.handleView} name="view">
-            View
-          </button>
+          <Link to={"/request/" + this.props.data._id}>View</Link>
           {JSON.parse(sessionStorage.getItem("token")).role === 1 ? (
-            <button onClick={this.handleEdit}>Edit</button>
+            <Link to={"/edit/" + this.props.data._id}> Edit </Link>
           ) : null}
         </td>
       </tr>
