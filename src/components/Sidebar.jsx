@@ -24,7 +24,7 @@ export default class Sidebar extends Component {
 
   // Retrieves the open and matched requests from back-end and updates the state
   checkForNotifications() {
-    const url = `http://localhost:5005/dashboard/view/${JSON.parse(sessionStorage.getItem("token"))._id}`;
+    const url = `${process.env.REACT_APP_API_URL}/dashboard/view/${JSON.parse(sessionStorage.getItem("token"))._id}`;
 
     fetch(url)
       .then(response => response.json())
