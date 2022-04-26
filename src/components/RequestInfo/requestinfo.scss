@@ -1,10 +1,9 @@
 .request-info-container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-}
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
 
-.request-info {  
+  .request-info {
     overflow-x: auto;
 
     display: grid;
@@ -12,19 +11,27 @@
     padding: 30px;
     grid-template-columns: 1fr max-content;
     grid-template-rows: max-content max-content auto;
-    gap: 20px 20px; 
+    gap: 20px 20px;
     grid-auto-flow: row;
     grid-template-areas:
       "general profile"
       "general buttons"
       "general key-info";
   }
-  
-  .general { grid-area: general; }
-  
-  .profile { grid-area: profile; }
-  
-  .buttons { grid-area: buttons; }
-  
-  .key-info { grid-area: key-info; }
-  
+
+  .general {
+    grid-area: general;
+  }
+
+  .profile {
+    grid-area: profile;
+  }
+
+  .buttons {
+    grid-area: buttons;
+  }
+
+  .key-info {
+    grid-area: key-info;
+  }
+}

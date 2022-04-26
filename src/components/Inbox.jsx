@@ -7,7 +7,7 @@ function Inbox() {
   return (
     <div className="flexrow">
       <Sidebar />
-      <div className="requests">
+      <div className="inboxPage">
         <HelpReq />
         <OfferReq />
       </div>
