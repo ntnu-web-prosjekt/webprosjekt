@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Filter from "./Catalogue/Filter";
+// import Filter from "./Catalogue/Filter";
 import Requests from "./Catalogue/Requests";
 import Sidebar from "./Sidebar";
 import "./Catalogue/catalogue.scss";
@@ -11,7 +11,7 @@ export default class Catalogue extends Component {
         <Sidebar />
         <div className="pageContent catalogue">
           <Requests />
-          <Filter />
+          {/* <Filter /> */}
         </div>
       </div>
     );

@@ -4,7 +4,6 @@ import {
   Routes,
   Route,
   Navigate,
-  NavLink,
 } from "react-router-dom";
 
 import Catalogue from "./components/Catalogue";
@@ -20,9 +19,8 @@ import UserProfile from "./components/Profile";
 import RequestInfo from "./components/RequestInfo";
 import About from "./components/About";
 import useToken from "./components/token/useToken";
-import RequestForm from "./components/NewRequest/RequestForm"
+import RequestForm from "./components/NewRequest/RequestForm";
 import UpdateRequest from "./components/UpdateRequest/UpdateRequest";
-
 
 export default function BasicRouting() {
   // Start Auth
@@ -31,47 +29,6 @@ export default function BasicRouting() {
   return (
     <Router>
       <div>
-        {/* <ul>
-          <li>
-            <NavLink to="/">Dashboard</NavLink>
-          </li>
-          <li>
-            <NavLink to="/login">Login</NavLink>
-          </li>
-          <li>
-            <NavLink to="/myRequests">My Requests</NavLink>
-          </li>
-          <li>
-            <NavLink to="/inbox">Inbox</NavLink>
-          </li>
-          <li>
-            <NavLink to="/profile">Profile</NavLink>
-          </li>
-          <li>
-            <NavLink to="/settings">Settings</NavLink>
-          </li>
-          <li>
-            <NavLink to="/UserProfile">UserProfile</NavLink>
-          </li>
-          <li>
-            <NavLink to="/findUser">Find User</NavLink>
-          </li>
-          <li>
-            <NavLink to="/registration">Registrations</NavLink>
-          </li>
-          <li>
-            <NavLink to="/catalogue">catalogue</NavLink>
-          </li>
-          <li>
-            <NavLink to="/requestInfo">requestInfo</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">about</NavLink>
-          </li>
-        </ul>
-
-        <hr /> */}
-
         <Routes>
           <Route
             exact
@@ -137,21 +94,21 @@ export default function BasicRouting() {
 
           <Route
             exact
-            path ="/request/:_id"
+            path="/request/:_id"
             element={!token ? <Navigate to="/" /> : <RequestInfo />}
           ></Route>
 
-          <Route 
-            exact 
-            path ="/create" 
+          <Route
+            exact
+            path="/create"
             element={!token ? <Navigate to="/" /> : <RequestForm />}
-            ></Route>
+          ></Route>
 
-          <Route 
-            exact 
-            path ="/edit/:_id" 
+          <Route
+            exact
+            path="/edit/:_id"
             element={!token ? <Navigate to="/" /> : <UpdateRequest />}
-            ></Route>
+          ></Route>
 
           <Route exact path="/about" element={<About />}></Route>
         </Routes>

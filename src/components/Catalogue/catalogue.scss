@@ -5,7 +5,7 @@
   margin-bottom: 20px;
   display: grid;
   gap: 10%;
-  grid-template-columns: 70% 20%;
+  // grid-template-columns: 70% 20%;
 }
 
 .filter {
@@ -20,8 +20,9 @@
   }
 }
 
-.requests {
+.catalogueRequests {
   height: 100%;
+  width: 100%;
   overflow: auto;
   border-radius: 10px;
 
