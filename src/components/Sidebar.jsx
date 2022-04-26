@@ -14,6 +14,7 @@ export default class Sidebar extends Component {
     this.state = {
       notifications: false,
       active: -1,
+
     };
 
     this.checkForNotifications = this.checkForNotifications.bind(this);
