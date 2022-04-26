@@ -4,11 +4,17 @@ export default class catalogueEntry extends Component {
   constructor() {
     super();
 
-    this.handleClick = this.handleClick.bind(this);
+    this.handleView = this.handleView.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
-  handleClick = (e) => {
-    if (e.name === "view") console.log("view");
-    else console.log("edit");
+  handleView = (e) => {
+    // redirect to view
+
+    window.location.href = "/request/" + this.props._id;
+  };
+  handleEdit = (e) => {
+    // redirect to edit
+    window.location.href = "/edit/" + this.props._id;
   };
   render() {
     return (
@@ -17,10 +23,12 @@ export default class catalogueEntry extends Component {
         <td>{`${this.props.data.endDate.getDate()}.${this.props.data.endDate.getMonth()}.${this.props.data.endDate.getFullYear()}`}</td>
         <td>{this.props.data.subjectName}</td>
         <td>
-          <button onClick={this.handleClick} name="view">
+          <button onClick={this.handleView} name="view">
             View
           </button>
-          <button onClick={this.handleClick}>Edit</button>
+          {JSON.parse(sessionStorage.getItem("token")).role === 1 ? (
+            <button onClick={this.handleEdit}>Edit</button>
+          ) : null}
         </td>
       </tr>
     );
