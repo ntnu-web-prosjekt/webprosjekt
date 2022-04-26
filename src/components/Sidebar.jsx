@@ -42,7 +42,11 @@ export default class Sidebar extends Component {
     return (
       <nav>
         <NavLink to={"/"}>
-          <img src={process.env.PUBLIC_URL + "img/logo.svg"} alt="logo" />
+          <img
+            src={process.env.REACT_APP_BASE_URL + "img/logo.svg"}
+            alt="logo"
+          />
+          {console.log(process.env.REACT_APP_BASE_URL)}
         </NavLink>
 
         <ul className="main-nav">
@@ -53,7 +57,9 @@ export default class Sidebar extends Component {
             <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/house.svg"}
+                src={
+                  process.env.REACT_APP_BASE_URL + "img/menu-icons/house.svg"
+                }
                 alt="icon"
               />
               Dashboard
@@ -67,7 +73,7 @@ export default class Sidebar extends Component {
             <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/list.svg"}
+                src={process.env.REACT_APP_BASE_URL + "img/menu-icons/list.svg"}
                 alt="icon"
               />
               Requests{" "}
@@ -86,7 +92,7 @@ export default class Sidebar extends Component {
             <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/cata.svg"}
+                src={process.env.REACT_APP_BASE_URL + "img/menu-icons/cata.svg"}
                 alt="icon"
               />
               Catalogue
@@ -100,7 +106,9 @@ export default class Sidebar extends Component {
             <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/magnify.svg"}
+                src={
+                  process.env.REACT_APP_BASE_URL + "img/menu-icons/magnify.svg"
+                }
                 alt="icon"
               />
               Find User
@@ -116,7 +124,7 @@ export default class Sidebar extends Component {
             <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/user.svg"}
+                src={process.env.REACT_APP_BASE_URL + "img/menu-icons/user.svg"}
                 alt="icon"
               />
               My Profile
@@ -127,7 +135,7 @@ export default class Sidebar extends Component {
             <li>
               <img
                 className="icon"
-                src={process.env.PUBLIC_URL + "img/menu-icons/end.svg"}
+                src={process.env.REACT_APP_BASE_URL + "img/menu-icons/end.svg"}
                 alt="icon"
               />
               Log Out
