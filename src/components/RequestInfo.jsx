@@ -29,7 +29,7 @@ function RequestInfo() {
     fetchRequest();
   }, [params._id]);
   return (
-    <div className="request-info-container">
+    <div className="page request-info-container">
       <Sidebar />
 
       <div className="request-info">

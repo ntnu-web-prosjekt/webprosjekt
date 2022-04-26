@@ -1,13 +1,8 @@
 .request-info-container {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-
   .request-info {
     overflow-x: auto;
 
     display: grid;
-    width: 100%;
     padding: 30px;
     grid-template-columns: 1fr max-content;
     grid-template-rows: max-content max-content auto;
