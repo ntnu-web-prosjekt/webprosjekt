@@ -2,6 +2,11 @@
 @import "base/_typography";
 @import "base/reset";
 @import "base/icons";
+@import "components/buttons";
+
+* {
+  transition: all 0.1s;
+}
 
 html {
   background: $DarkPageBackgroundColor;
