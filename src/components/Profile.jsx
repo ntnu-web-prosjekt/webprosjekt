@@ -7,17 +7,18 @@ import ProfileInfo from "./profile/ProfileInfo";
 import Sidebar from "./Sidebar";
 
 function App() {
+  const userData = JSON.parse(sessionStorage.getItem("token"));
   return (
     <div className="profile-page">
       <div className="sidebar">
         <Sidebar />
       </div>
       <div className="Profile">
-        <ProfileInfo />
-        <Tags />
-        <AboutMe />
-        <PendingReq />
-        <MyReview />
+        <ProfileInfo {...userData} />
+        <Tags {...userData} />
+        <AboutMe {...userData} />
+        <PendingReq {...userData} />
+        <MyReview {...userData} />
       </div>
     </div>
   );
