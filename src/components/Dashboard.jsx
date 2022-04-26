@@ -10,10 +10,9 @@ export default class Dashboard extends Component {
     super(props);
 
     this.state = {
-      username: null,
-      waitingForReply: null,
+      waitingForReply: true,
       pendingRequests: null,
-      upcomingRequests: null
+      upcomingRequests: null,
     };
 
     this.retrieveDashboardData = this.retrieveDashboardData.bind(this);
@@ -25,18 +24,18 @@ export default class Dashboard extends Component {
 
   // Retrieves the open and matched requests from back-end and updates the state
   retrieveDashboardData() {
-    const url = `${process.env.REACT_APP_API_URL}/dashboard/view/${JSON.parse(sessionStorage.getItem("token"))._id}`;
+    const url = `${process.env.REACT_APP_API_URL}/dashboard/view/${
+      JSON.parse(sessionStorage.getItem("token"))._id
+    }`;
 
     fetch(url)
-      .then(response => response.json())
-      .then(data => {       
+      .then((response) => response.json())
+      .then((data) => {
         this.setState({
-          username: data.userInfo.name.firstName + " " + data.userInfo.name.lastName,
           waitingForReply: data.waitingForReply,
           pendingRequests: data.ownJobs,
-          upcomingRequests: data.activeJobs
+          upcomingRequests: data.activeJobs,
         });
-        
       });
   }
 
@@ -45,10 +44,15 @@ export default class Dashboard extends Component {
       <div className="page">
         <Sidebar />
         <div className="pageContent dashboard">
-          <WelcomeUser name={this.state.username} waitingForReply={this.state.waitingForReply}/>
+          <WelcomeUser
+            name={`${
+              JSON.parse(sessionStorage.getItem("token")).name.firstName
+            } ${JSON.parse(sessionStorage.getItem("token")).name.lastName}`}
+            waitingForReply={this.state.waitingForReply}
+          />
           <div className="requests-dash">
-            <PendingReq data={this.state.pendingRequests}/>
-            <UpcomingReq data={this.state.upcomingRequests}/>
+            <PendingReq data={this.state.pendingRequests} />
+            <UpcomingReq data={this.state.upcomingRequests} />
           </div>
         </div>
       </div>
