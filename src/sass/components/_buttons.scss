@@ -1,7 +1,6 @@
 .aButton {
   background: $DarkAccent;
   color: $DarkAccent_Contrast;
-  height: 1em;
   margin: 0;
   cursor: pointer;
 
@@ -10,4 +9,5 @@
   padding: 16px;
 
   line-height: 1em;
+  font-size: 1em;
 }

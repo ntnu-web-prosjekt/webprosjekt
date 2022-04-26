@@ -1,5 +1,5 @@
 @import "../../sass/base/_typography";
-@import "../../sass/abstracts/_colors";
+@import "../../sass/abstracts/colors";
 
 .Registration {
   @include font;
@@ -20,20 +20,25 @@
     width: 75%;
     display: grid;
     align-content: start;
+    justify-content: center;
+    gap: 64px;
 
     h1 {
-      text-align: left;
+      text-align: center;
     }
     form {
       display: grid;
-      align-content: start;
-      justify-content: start;
       gap: 24px;
+
+      label {
+        display: grid;
+        gap: 8px;
+      }
     }
   }
 
   textarea {
-    background-color: white;
-    color: black;
+    background-color: $DarkContainerBackgroundColor;
+    color: $DarkTextColor;
   }
 }
