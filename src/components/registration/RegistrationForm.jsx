@@ -120,167 +120,166 @@ class RegistrationForm extends Component {
   };
 
   render() {
-    return (
+    return this.state.formIndex === 1 ? (
       <div>
-        this.state.formIndex === 1 ? (
-        <div>
-          <h1>Request an account (step 1/3)</h1>
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              <p>First Name</p>
-              <input
-                className="aInput"
-                type="text"
-                name="firstName"
-                placeholder="First Name"
-                value={this.state.firstName}
-                onChange={this.handleChange}
-                required
-              />
-            </label>
-            <label>
-              <p>Last Name</p>
-              <input
-                className="aInput"
-                type="text"
-                name="lastName"
-                placeholder="Last Name"
-                value={this.state.lastName}
-                onChange={this.handleChange}
-                required
-              />
-            </label>
-            <label>
-              <p>Phone Number</p>
-              <input
-                className="aInput"
-                type="tel"
-                name="phone"
-                placeholder="123 45 678"
-                value={this.state.phone}
-                onChange={this.handleChange}
-                required
-              />
-            </label>
-            <label>
-              <p>E-Mail</p>
-              <input
-                className="aInput"
-                type="text"
-                name="email"
-                placeholder="John@Doe.Com"
-                value={this.state.email}
-                onChange={this.handleChange}
-                required
-              />
-            </label>
-            <label>
-              <p>Password</p>
-              <input
-                className="aInput"
-                type="password"
-                name="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.handleChange}
-                required
-              />
-            </label>
-            <label>
-              <p>Repeat Password</p>
-              <input
-                className="aInput"
-                type="password"
-                name="repeatPassword"
-                placeholder="Repeat Password"
-                value={this.state.repeatPassword}
-                onChange={this.handleChange}
-                required
-              />
-            </label>
-          </form>
-        </div>
-        ) : this.state.formIndex === 2 ? (
-        <div>
-          <h1>Request an account (step 2/3)</h1>
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              <p>Your Title</p>
-              <select
-                className="aInput"
-                name="title"
-                value={this.state.title}
-                onChange={this.handleChange}
-                required
-              >
-                <option value="Professor">Professor</option>
-                <option value="Associate professor">Associate professor</option>
-                <option value="Doctor">Doctor</option>
-              </select>
-            </label>
-            <label>
-              <p>Your University</p>
-              <select
-                className="aInput"
-                name="university"
-                value={this.state.university}
-                onChange={this.handleChange}
-                required
-              >
-                <option value="NTNU">NTNU</option>
-                <option value="UIO">UIO</option>
-              </select>
-            </label>
-          </form>
-        </div>
-        ) : this.state.formIndex === 3 ? (
-        <div>
-          <h1>Request an account (step 3/3)</h1>
-          <form onSubmit={this.registerSubmit}>
-            <label>
-              <p>Tags (separate by comma)</p>
-              <textarea
-                className="aInput"
-                id="tags"
-                name="tags"
-                rows="4"
-                cols="60"
-                onChange={this.handleChange}
-                placeholder="Type here..."
-                required
-              />
-            </label>
-            <label>
-              <p>Your Description</p>
-              <textarea
-                className="aInput"
-                id="description"
-                name="description"
-                rows="4"
-                cols="60"
-                onChange={this.handleChange}
-                value={this.state.description}
-                placeholder="A short text about you..."
-                required
-              />
-            </label>
-          </form>
-        </div>
-        ) : this.state.formIndex === 4 ? (
-        <div>
-          <h1>Thank you for registrating!</h1>
-          <p>
-            Please wait for an administrator to approve your account. You will
-            receive an email which details whether you have been approved or
-            not.
-          </p>
-          <NavLink to="/login">Back to login</NavLink>
-        </div>
-        ) : (
-        <div>
-          <h1>Waiting for a response from the server...</h1>
-          <h2>Current status: {this.state.registerStatus}</h2>
-        </div>
+        <h1>Request an account (step 1/3)</h1>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            <p>First Name</p>
+            <input
+              className="aInput"
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              value={this.state.firstName}
+              onChange={this.handleChange}
+              required
+            />
+          </label>
+          <label>
+            <p>Last Name</p>
+            <input
+              className="aInput"
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              value={this.state.lastName}
+              onChange={this.handleChange}
+              required
+            />
+          </label>
+          <label>
+            <p>Phone Number</p>
+            <input
+              className="aInput"
+              type="tel"
+              name="phone"
+              placeholder="123 45 678"
+              value={this.state.phone}
+              onChange={this.handleChange}
+              required
+            />
+          </label>
+          <label>
+            <p>E-Mail</p>
+            <input
+              className="aInput"
+              type="text"
+              name="email"
+              placeholder="John@Doe.Com"
+              value={this.state.email}
+              onChange={this.handleChange}
+              required
+            />
+          </label>
+          <label>
+            <p>Password</p>
+            <input
+              className="aInput"
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.handleChange}
+              required
+            />
+          </label>
+          <label>
+            <p>Repeat Password</p>
+            <input
+              className="aInput"
+              type="password"
+              name="repeatPassword"
+              placeholder="Repeat Password"
+              value={this.state.repeatPassword}
+              onChange={this.handleChange}
+              required
+            />
+          </label>
+          <input type="submit" className="aButton" value="Next Page" />
+        </form>
+      </div>
+    ) : this.state.formIndex === 2 ? (
+      <div>
+        <h1>Request an account (step 2/3)</h1>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            <p>Your Title</p>
+            <select
+              className="aInput"
+              name="title"
+              value={this.state.title}
+              onChange={this.handleChange}
+              required
+            >
+              <option value="Professor">Professor</option>
+              <option value="Associate professor">Associate professor</option>
+              <option value="Doctor">Doctor</option>
+            </select>
+          </label>
+          <label>
+            <p>Your University</p>
+            <select
+              className="aInput"
+              name="university"
+              value={this.state.university}
+              onChange={this.handleChange}
+              required
+            >
+              <option value="NTNU">NTNU</option>
+              <option value="UIO">UIO</option>
+            </select>
+          </label>
+          <input type="submit" className="aButton" value="Next Page" />
+        </form>
+      </div>
+    ) : this.state.formIndex === 3 ? (
+      <div>
+        <h1>Request an account (step 3/3)</h1>
+        <form onSubmit={this.registerSubmit}>
+          <label>
+            <p>Tags (separate by comma)</p>
+            <textarea
+              className="aInput"
+              id="tags"
+              name="tags"
+              rows="4"
+              cols="60"
+              onChange={this.handleChange}
+              placeholder="Type here..."
+              required
+            />
+          </label>
+          <label>
+            <p>Your Description</p>
+            <textarea
+              className="aInput"
+              id="description"
+              name="description"
+              rows="4"
+              cols="60"
+              onChange={this.handleChange}
+              value={this.state.description}
+              placeholder="A short text about you..."
+              required
+            />
+          </label>
+          <input type="submit" className="aButton" value="Submit Request" />
+        </form>
+      </div>
+    ) : this.state.formIndex === 4 ? (
+      <div>
+        <h1>Thank you for registrating!</h1>
+        <p>
+          Please wait for an administrator to approve your account. You will
+          receive an email which details whether you have been approved or not.
+        </p>
+        <NavLink to="/login">Back to login</NavLink>
+      </div>
+    ) : (
+      <div>
+        <h1>Waiting for a response from the server...</h1>
+        <h2>Current status: {this.state.registerStatus}</h2>
       </div>
     );
   }
