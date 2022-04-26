@@ -7,7 +7,7 @@ function MyRequests() {
   return (
     <div className="page requestsPage">
       <Sidebar />
-      <div className="request-overview">
+      <div className="requests">
         <UsersCurrentReq />
         <UndertakenReq />
       </div>
