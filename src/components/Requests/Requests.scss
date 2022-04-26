@@ -1,29 +1,30 @@
 @import "../../sass/base/_typography";
 @import "../../sass/abstracts/_colors";
 
-.flexrow {
-  display: flex;
-  flex-direction: row;
-
-  .requests {
+.request-overview {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 70vw;
     margin: 4rem;
-  }
+}
 
-  .abovetable {
+.flexrow {
+    display: flex;
+    flex-direction: row;
+}
+
+.abovetable {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 1rem;
-  }
+}
 
-  .justify_start {
+.justify_start {
     margin-right: auto;
-  }
+}
 
-  .above_button {
-    background: #3577ff;
+.above_button {
+    background: #3577FF;
     color: $DarkTextColor;
     width: 6vw;
     margin-left: 1rem;
@@ -38,15 +39,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .above_button:hover {
-    background-color: #6197ee;
+.above_button:hover {
+    background-color: #6197EE;
     border-radius: 10px;
+
+}
+
+.request-tablehead {
+    background-color: #3577FF;
+}
+.request-table {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #171E2E;
+    margin-bottom: 2rem;
   }
 
-  th,
-  td {
+.request-table td, .request-table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
@@ -54,17 +66,3 @@
     width: 10px;
   }
 
-  .tablehead {
-    background-color: #3577ff;
-  }
-  .table {
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #171e2e;
-  }
-
-  .table td,
-  .table th {
-    padding: 8px;
-  }
-}

@@ -7,7 +7,7 @@ function MyRequests() {
   return (
     <div className="flexrow">
       <Sidebar />
-      <div className="requests">
+      <div className="request-overview">
         <UsersCurrentReq />
         <UndertakenReq />
       </div>
