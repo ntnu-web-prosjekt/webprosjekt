@@ -11,8 +11,8 @@ class RegistrationForm extends Component {
       email: "",
       password: "",
       repeatPassword: "",
-      title: "",
-      university: "",
+      title: "Professor",
+      university: "NTNU",
       tags: [],
       description: "",
       formIndex: 1,
@@ -48,7 +48,10 @@ class RegistrationForm extends Component {
         const tags = event.target.value;
 
         // Splitting string, and removes array elements which are empty
-        const tagsArray = tags.split(",").map(tag => tag.trim()).filter((tagWithoutEmptySpace) => tagWithoutEmptySpace);
+        const tagsArray = tags
+          .split(",")
+          .map((tag) => tag.trim())
+          .filter((tagWithoutEmptySpace) => tagWithoutEmptySpace);
 
         // Setting the state
         this.setState({ tags: tagsArray });
@@ -122,9 +125,9 @@ class RegistrationForm extends Component {
         <h1>Request an account (step 1/3)</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
-            First Name
-            <br />
+            <p>First Name</p>
             <input
+              className="aInput"
               type="text"
               name="firstName"
               placeholder="First Name"
@@ -134,9 +137,9 @@ class RegistrationForm extends Component {
             />
           </label>
           <label>
-            Last Name
-            <br />
+            <p>Last Name</p>
             <input
+              className="aInput"
               type="text"
               name="lastName"
               placeholder="Last Name"
@@ -146,9 +149,9 @@ class RegistrationForm extends Component {
             />
           </label>
           <label>
-            Phone Number
-            <br />
+            <p>Phone Number</p>
             <input
+              className="aInput"
               type="tel"
               name="phone"
               placeholder="123 45 678"
@@ -158,9 +161,9 @@ class RegistrationForm extends Component {
             />
           </label>
           <label>
-            E-Mail
-            <br />
+            <p>E-Mail</p>
             <input
+              className="aInput"
               type="text"
               name="email"
               placeholder="John@Doe.Com"
@@ -170,9 +173,9 @@ class RegistrationForm extends Component {
             />
           </label>
           <label>
-            Password
-            <br />
+            <p>Password</p>
             <input
+              className="aInput"
               type="password"
               name="password"
               placeholder="Password"
@@ -182,9 +185,9 @@ class RegistrationForm extends Component {
             />
           </label>
           <label>
-            Repeat Password
-            <br />
+            <p>Repeat Password</p>
             <input
+              className="aInput"
               type="password"
               name="repeatPassword"
               placeholder="Repeat Password"
@@ -193,7 +196,7 @@ class RegistrationForm extends Component {
               required
             />
           </label>
-          <input type="submit" value="Next" />
+          <input type="submit" className="aButton" value="Next Page" />
         </form>
       </div>
     ) : this.state.formIndex === 2 ? (
@@ -201,35 +204,33 @@ class RegistrationForm extends Component {
         <h1>Request an account (step 2/3)</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
-            Your Title
-            <br />
+            <p>Your Title</p>
             <select
+              className="aInput"
               name="title"
               value={this.state.title}
               onChange={this.handleChange}
               required
             >
-              <option value="" disabled>Choose one...</option>
               <option value="Professor">Professor</option>
               <option value="Associate professor">Associate professor</option>
               <option value="Doctor">Doctor</option>
             </select>
           </label>
           <label>
-            Your University
-            <br />
+            <p>Your University</p>
             <select
+              className="aInput"
               name="university"
               value={this.state.university}
               onChange={this.handleChange}
               required
             >
-              <option value="" disabled>Choose one...</option>
               <option value="NTNU">NTNU</option>
               <option value="UIO">UIO</option>
             </select>
           </label>
-          <input type="submit" value="Next" />
+          <input type="submit" className="aButton" value="Next Page" />
         </form>
       </div>
     ) : this.state.formIndex === 3 ? (
@@ -237,26 +238,41 @@ class RegistrationForm extends Component {
         <h1>Request an account (step 3/3)</h1>
         <form onSubmit={this.registerSubmit}>
           <label>
-            Tags (separate by comma)
-            <br />
-            <textarea id="tags" name="tags" rows="4" cols="60" onChange={this.handleChange} placeholder="Type here..." required/>
+            <p>Tags (separate by comma)</p>
+            <textarea
+              className="aInput"
+              id="tags"
+              name="tags"
+              rows="4"
+              cols="60"
+              onChange={this.handleChange}
+              placeholder="Type here..."
+              required
+            />
           </label>
           <label>
-            Your Description
-            <br />
-            <textarea id="description" name="description" rows="4" cols="60" onChange={this.handleChange} value={this.state.description} placeholder="A short text about you..." required/>
+            <p>Your Description</p>
+            <textarea
+              className="aInput"
+              id="description"
+              name="description"
+              rows="4"
+              cols="60"
+              onChange={this.handleChange}
+              value={this.state.description}
+              placeholder="A short text about you..."
+              required
+            />
           </label>
-          <input type="submit" value="Next" />
+          <input type="submit" className="aButton" value="Submit Request" />
         </form>
       </div>
     ) : this.state.formIndex === 4 ? (
       <div>
         <h1>Thank you for registrating!</h1>
         <p>
-          Please wait for an administrator to approve your account.
-          <br />
-          You will receive an email which details whether you have been approved
-          or not.
+          Please wait for an administrator to approve your account. You will
+          receive an email which details whether you have been approved or not.
         </p>
         <NavLink to="/login">Back to login</NavLink>
       </div>
