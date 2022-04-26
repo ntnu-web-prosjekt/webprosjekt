@@ -3,7 +3,7 @@ import "./UpcomingPendingReq.scss";
 function UpcomingReq(props) {
     return (
         <div className="examinaton">
-            <h2 className="examinaton__heading">Upcoming examinatons</h2>
+            <h2 className="examinaton__heading">Your upcoming examinatons</h2>
             <table>
             <tbody>
             {props.data ? props.data.map((item, index) => {

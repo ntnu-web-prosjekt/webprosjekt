@@ -46,7 +46,7 @@ export default class Dashboard extends Component {
         <Sidebar />
         <div className="pageContent dashboard">
           <WelcomeUser name={this.state.username} waitingForReply={this.state.waitingForReply}/>
-          <div className="requests">
+          <div className="requests-dash">
             <PendingReq data={this.state.pendingRequests}/>
             <UpcomingReq data={this.state.upcomingRequests}/>
           </div>
