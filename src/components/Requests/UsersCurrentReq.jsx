@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
   
 
 const API_HOST = process.env.REACT_APP_API_URL;
-const REQUESTS_API_URL = `${API_HOST}/requests/${JSON.parse(sessionStorage.getItem("token"))._id}`;
+
 
 
 class UsersCurrentReq extends React.Component {
@@ -15,6 +15,7 @@ class UsersCurrentReq extends React.Component {
     }
     
     componentDidMount() {
+        const REQUESTS_API_URL = `${API_HOST}/requests/${JSON.parse(sessionStorage.getItem("token"))._id}`;
         fetch(REQUESTS_API_URL)
             .then(response => response.json())
             .then(data => this.setState({ requests: data }));

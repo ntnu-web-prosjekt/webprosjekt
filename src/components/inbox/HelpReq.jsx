@@ -7,8 +7,8 @@ class HelpReq extends React.Component {
         <div className="abovetable">
           <h2 className="justify_start">Requesting your help</h2>
         </div>
-        <table className="table">
-          <thead className="tablehead">
+        <table className="request-table">
+          <thead className="request-tablehead">
             <tr>
               <th>Start date</th>
               <th>End date</th>

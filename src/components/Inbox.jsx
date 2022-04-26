@@ -5,9 +5,9 @@ import Sidebar from "./Sidebar";
 
 function Inbox() {
   return (
-    <div className="flexrow">
+    <div className="page requestsPage">
       <Sidebar />
-      <div className="inboxPage">
+      <div className="requests">
         <HelpReq />
         <OfferReq />
       </div>
