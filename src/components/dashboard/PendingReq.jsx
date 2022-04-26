@@ -3,7 +3,7 @@ import "./UpcomingPendingReq.scss";
 function PendingReq(props) {
     return (
         <div className="examinaton">
-            <h2 className="examinaton__heading">Pending examinator requests</h2>
+            <h2 className="examinaton__heading">Your pending requests</h2>
             <table>
             <tbody>
                 {props.data ? props.data.map((item, index) => {
