@@ -1,8 +1,7 @@
-import "./Requests/Requests.scss";
+import "./Requests/Requests.module.scss";
 import UndertakenReq from "./Requests/UndertakenReq";
-import UsersCurrentReq from "./Requests/UsersCurrentReq"
+import UsersCurrentReq from "./Requests/UsersCurrentReq";
 import Sidebar from "./Sidebar";
-
 
 function MyRequests() {
   return (

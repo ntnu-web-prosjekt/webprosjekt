@@ -1,7 +1,17 @@
 import React, { Component } from "react";
 import CatalogueEntry from "./catalogueEntry";
+import catalogueData from "./catalogueData";
 
 export default class Requests extends Component {
+  constructor() {
+    super();
+    this.state = { entries: [] };
+  }
+  async componentDidMount() {
+    var array = await catalogueData();
+    this.setState({ entries: array });
+  }
+
   render() {
     return (
       <div className="requests">
@@ -15,116 +25,11 @@ export default class Requests extends Component {
             </tr>
           </thead>
           <tbody>
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
-            <CatalogueEntry
-              startdate="21.05.22"
-              enddate="23.06.22"
-              subject="Basics of HTML"
-            />
+            {this.state.entries.length > 0
+              ? this.state.entries.map((obj) => {
+                  return <CatalogueEntry data={obj} key={obj._id} />;
+                })
+              : null}
           </tbody>
         </table>
       </div>
