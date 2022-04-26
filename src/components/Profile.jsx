@@ -9,16 +9,14 @@ import Sidebar from "./Sidebar";
 function App() {
   const userData = JSON.parse(sessionStorage.getItem("token"));
   return (
-    <div className="profile-page">
-      <div className="sidebar">
+    <div className="page">
         <Sidebar />
-      </div>
-      <div className="Profile">
+      <div className="pageContent Profile">
         <ProfileInfo {...userData} />
+        <div>
         <Tags {...userData} />
         <AboutMe {...userData} />
-        <PendingReq {...userData} />
-        <MyReview {...userData} />
+        </div>
       </div>
     </div>
   );
