@@ -20,7 +20,7 @@ function WelcomeUser(props) {
           />
         </div>
         <div className="welcome__container__message">
-          {props.waitingForReply === false ? (
+          {props.waitingForReply === true ? (
             <NavLink to="/inbox">
               <span className="welcome__container__message__text">
                 You have request(s) waiting for reply &nbsp;
