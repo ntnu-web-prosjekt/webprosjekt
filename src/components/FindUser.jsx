@@ -1,5 +1,4 @@
 import Sidebar from "./Sidebar";
-import "../components/Requests/Requests.scss";
 import "../components/findUser/findUser.scss";
 import UserEntry from "../components/findUser/UserEntry";
 
