@@ -1,12 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class LoginForm extends React.Component {
   render() {
     return (
       <div className="loginform">
         <img
-          src={process.env.PUBLIC_URL + "img/logo.svg"}
+          src={process.env.REACT_APP_BASE_URL + "img/logo.svg"}
           alt="Logo"
           id="logo"
         />
@@ -33,9 +33,9 @@ class LoginForm extends React.Component {
           </label>
           <input type="submit" name="login" id="login" value="Sign in" />
         </form>
-        <NavLink to="/registration" className="request">
+        <Link to="/registration" className="aButton">
           Request user account
-        </NavLink>
+        </Link>
       </div>
     );
   }

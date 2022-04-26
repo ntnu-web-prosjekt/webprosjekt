@@ -1,0 +1,11 @@
+.pageNotFound {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 64px;
+  height: 100vh;
+
+  h1 {
+    font-size: 64px;
+  }
+}

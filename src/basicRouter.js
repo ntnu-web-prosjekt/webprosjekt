@@ -22,6 +22,7 @@ import useToken from "./components/token/useToken";
 import RequestForm from "./components/NewRequest/RequestForm";
 import UpdateRequest from "./components/UpdateRequest/UpdateRequest";
 import ViewProfile from "./components/ViewProfile";
+import PageNotFound from "./components/PageNotFound";
 
 export default function BasicRouting() {
   // Start Auth
@@ -118,6 +119,8 @@ export default function BasicRouting() {
           ></Route>
 
           <Route exact path="/about" element={<About />}></Route>
+
+          <Route exact path="*" element={<PageNotFound />} />
         </Routes>
       </div>
     </Router>
