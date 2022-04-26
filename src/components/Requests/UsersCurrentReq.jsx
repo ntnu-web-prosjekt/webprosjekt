@@ -28,8 +28,8 @@ class UsersCurrentReq extends React.Component {
                         <Link className='above_button' to={`/create`}>Create request</Link>
                         <Link className='above_button' to={`/inbox`}>Inbox</Link>
                     </div>
-                    <table className='table'>
-                        <thead className='tablehead'>
+                    <table className='request-table'>
+                        <thead className='request-tablehead'>
                         <tr>
                             <th>Start date</th>
                             <th>End date</th>
