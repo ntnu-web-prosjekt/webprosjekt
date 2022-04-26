@@ -4,10 +4,15 @@
   display: grid;
   align-content: center;
   justify-items: center;
-  gap: 24px;
+  gap: 128px;
   margin: 0 auto;
 }
-
+.aboutContainer {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 24px;
+}
 .creators {
   display: flex;
   gap: 24px;
@@ -24,4 +29,5 @@
 .para {
   max-width: 75ch;
   line-height: 24px;
+  text-align: center;
 }
