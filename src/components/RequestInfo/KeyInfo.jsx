@@ -72,7 +72,7 @@ function KeyInfo(props) {
               target="_blank"
               rel="noreferrer"
             >
-              {props.request.url}
+              {props.request.subjectUrl}
             </a>
           </span>
         </li>
