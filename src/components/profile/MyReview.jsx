@@ -8,7 +8,7 @@ export default class MyReview extends Component {
         <textarea
           placeholder="Review of teacher..."
           id="myReview"
-          rows="20"
+          rows="8"
           cols="60"
         ></textarea>
         <button type="button">Edit</button>

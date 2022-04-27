@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class PendingReq extends Component {
   constructor(props) {
@@ -28,7 +29,10 @@ export default class PendingReq extends Component {
           {this.state.pendingReq.map((pendingReq, index) => {
             return (
               <li key={index}>
-                <span>{pendingReq.subjectName}</span>
+                <span>
+                  {pendingReq.subjectCode} - {pendingReq.subjectName}
+                </span>
+                <Link to={`/request/${pendingReq._id}`}>View</Link>
               </li>
             );
           })}
