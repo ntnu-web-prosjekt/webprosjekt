@@ -15,7 +15,7 @@ function RequestInfo() {
   const [request, setRequest] = useState({});
   useEffect(() => {
     const API_HOST = process.env.REACT_APP_API_URL;
-    const req = `${API_HOST}/requests/${params._id}`;
+    const req = `${API_HOST}/requests/view/${params._id}`;
     const fetchRequest = async () => {
       try {
         const response = await fetch(req);
