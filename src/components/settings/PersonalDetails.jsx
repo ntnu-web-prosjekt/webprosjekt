@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Tags from "../profile/Tags";
+// import Tags from "../profile/Tags";
 import "../profile/profile.scss";
 export default class PersonalDetails extends Component {
   render() {
@@ -37,7 +37,7 @@ export default class PersonalDetails extends Component {
         <label>Email</label>
         <input type="email" />
 
-        <Tags />
+        {/* <Tags /> */}
       </div>
     );
   }

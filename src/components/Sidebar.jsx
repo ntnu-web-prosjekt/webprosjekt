@@ -131,6 +131,20 @@ export default class Sidebar extends Component {
             </li>
           </NavLink>
 
+          <NavLink
+            to={"/settings"}
+            className={this.props.active === 5 ? "active" : null}
+          >
+            <li>
+              <img
+                className="icon"
+                src={process.env.REACT_APP_BASE_URL + "img/menu-icons/gear.svg"}
+                alt="icon"
+              />
+              Settings
+            </li>
+          </NavLink>
+
           <NavLink to="/login" onClick={logOut}>
             <li>
               <img
