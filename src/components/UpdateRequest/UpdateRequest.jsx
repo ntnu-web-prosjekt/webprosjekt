@@ -9,7 +9,7 @@ function UpdateRequest() {
   const params = useParams();
 
   useEffect(() => {
-    const req = `${API_HOST}/requests/${params._id}`;
+    const req = `${API_HOST}/requests/view/${params._id}`;
     const fetchRequest = async () => {
       try {
         const response = await fetch(req);
@@ -156,15 +156,14 @@ function UpdateRequest() {
             name="slevel"
             id="slevel"
             onChange={handleChange}
-            defaultValue={"DEFAULT"}
-            value={request.subjectLevel}
+            defaultValue={request.subjectLevel}
             required
           >
             <option value="DEFAULT" disabled>
               Choose one...
             </option>
             <option value="bachelor">Bachelor</option>
-            <option value="master">Master</option>
+            <option value="Master">Master</option>
             <option value="phd">Ph.d.</option>
             <option value="one-year">One-year programme</option>
           </select>
