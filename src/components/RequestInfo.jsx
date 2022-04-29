@@ -38,11 +38,11 @@ function RequestInfo() {
         </div>
 
         <div className="profile">
-          <RequsterProfile />
+          <RequsterProfile request={request}/>
         </div>
 
         <div className="buttons">
-          <ButtonContainer />
+          <ButtonContainer request={request}/>
         </div>
 
         <div className="key-info">
