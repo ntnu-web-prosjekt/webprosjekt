@@ -13,7 +13,7 @@ function GeneralInfo(props) {
                 <span className="gen-info__desc">{props.request.subjectName}</span>
                 <div className="gen-info__dates">
                     <div>
-                        <span className="gen-info__title">Start</span>
+                        <span className="gen-info__title">Starts</span>
                         <span className="gen-info__desc">{startDate.split("T")[0].replace(/-/g, "/")}</span>
                     </div>
                     <div>
