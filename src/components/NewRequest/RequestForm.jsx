@@ -122,6 +122,8 @@ class RequestForm extends React.Component {
 
         return (
             <div className="requestForm">
+                <h1 style={{marginBottom: 30}}>Create new request</h1>
+
                 <form autoComplete="off" onSubmit={this.handleSubmit}>
                     <h2 className="form-header">1. General info</h2>
 
@@ -176,7 +178,7 @@ class RequestForm extends React.Component {
                     <span className="info">Please provide the address. If the job can be done remotely, type "online".</span>
                     <input type="text" id="loc" name="loc" onChange={this.handleChange} required/>
                     
-                    <label htmlFor="rlevel">Subject level*</label>
+                    <label htmlFor="rlevel">Examinator level*</label>
                     <span className="info">Which education level does the second examinator need to possess?</span>
                     <select name="rlevel" id="rlevel" onChange={this.handleChange} defaultValue={'DEFAULT'} required>
                         <option value="DEFAULT" disabled>Choose one...</option>

@@ -23,6 +23,7 @@ import RequestForm from "./components/NewRequest/RequestForm";
 import UpdateRequest from "./components/UpdateRequest/UpdateRequest";
 import ViewProfile from "./components/ViewProfile";
 import PageNotFound from "./components/PageNotFound";
+import CreateRequest from "./components/CreateRequest";
 
 export default function BasicRouting() {
   // Start Auth
@@ -109,7 +110,7 @@ export default function BasicRouting() {
           <Route
             exact
             path="/create"
-            element={!token ? <Navigate to="/" /> : <RequestForm />}
+            element={!token ? <Navigate to="/" /> : <CreateRequest />}
           ></Route>
 
           <Route
