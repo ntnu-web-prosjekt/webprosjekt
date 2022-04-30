@@ -32,8 +32,8 @@ class UsersCurrentReq extends React.Component {
                     <table className='request-table'>
                         <thead className='request-tablehead'>
                         <tr>
-                            <th>Start date</th>
-                            <th>End date</th>
+                            <th>Exam Date</th>
+                            <th>Grading Deadline</th>
                             <th>Subject</th>
                             <th>Second examiner</th>
                             <th></th>
