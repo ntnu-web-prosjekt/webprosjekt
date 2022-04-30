@@ -245,6 +245,9 @@ class RegistrationForm extends Component {
         <form onSubmit={this.registerSubmit}>
           <label>
             <p>Tags (separate by comma)</p>
+            <ul className="gen-tags__list">
+              {this.state.tags.map((tag, index) => <li key={index}>{tag}</li>)}
+            </ul>
             <textarea
               className="aInput"
               id="tags"
@@ -252,7 +255,7 @@ class RegistrationForm extends Component {
               rows="4"
               cols="60"
               onChange={this.handleChange}
-              placeholder="Type here..."
+              placeholder="Write relevant tags related to your academic knowledge..."
               required
             />
           </label>

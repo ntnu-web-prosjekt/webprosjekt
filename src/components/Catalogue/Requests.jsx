@@ -18,9 +18,10 @@ export default class Requests extends Component {
         <table>
           <thead>
             <tr>
-              <th>Start Date</th>
-              <th>End Date</th>
+              <th>Exam Date</th>
+              <th>Grading Deadline</th>
               <th>Subject</th>
+              <th>Tags</th>
               <th>Actions</th>
             </tr>
           </thead>

@@ -23,6 +23,7 @@ export default class catalogueEntry extends Component {
         <td>{`${this.props.data.startDate.split("T")[0].split("-")[2]}.${this.props.data.startDate.split("T")[0].split("-")[1]}.${this.props.data.startDate.split("T")[0].split("-")[0]}`}</td>
         <td>{`${this.props.data.endDate.split("T")[0].split("-")[2]}.${this.props.data.endDate.split("T")[0].split("-")[1]}.${this.props.data.endDate.split("T")[0].split("-")[0]}`}</td>
         <td>{this.props.data.subjectName}</td>
+        <td>{this.props.data.tags.length > 3 ? this.props.data.tags.slice(0, 3).join(', ') + " (...)" : this.props.data.tags.join(', ')}</td>
         <td>
           <Link to={"/request/" + this.props.data._id}>View</Link>
           {JSON.parse(sessionStorage.getItem("token")).role === 1 ? (
