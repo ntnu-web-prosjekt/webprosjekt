@@ -47,7 +47,7 @@ export default class FindUser extends Component {
                       name={user.name.firstName + " " + user.name.lastName}
                       university={user.university}
                       degree={user.degree}
-                      tags={user.tags.toString()}
+                      tags={user.tags.join(', ')}
                     />
                   ))
                   : console.log("loading users...")}

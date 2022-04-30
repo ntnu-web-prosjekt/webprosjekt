@@ -21,6 +21,7 @@ export default class Requests extends Component {
               <th>Exam Date</th>
               <th>Grading Deadline</th>
               <th>Subject</th>
+              <th>Tags</th>
               <th>Actions</th>
             </tr>
           </thead>
