@@ -20,11 +20,12 @@ export default class FindUser extends Component {
   }
   render() {
     return (
-      <div className="findUser-page">
-        <div className="sidebar">
-          <Sidebar />
-        </div>
-        <div className="FindUser">
+
+
+
+      <div className="page">
+        <Sidebar />
+        <div className="pageContent dashboard">
           <h1>Find Users</h1>
           <div className="requests" id="usersTable">
             <table>
@@ -39,22 +40,22 @@ export default class FindUser extends Component {
               <tbody>
                 {this.state.users.length > 0
                   ? this.state.users.map((user) => (
-                      <UserEntry
-                        key={user._id}
-                        className="userEntry"
-                        id={user._id}
-                        name={user.name.firstName + " " + user.name.lastName}
-                        university={user.university}
-                        degree={user.degree}
-                        tags={user.tags.toString()}
-                      />
-                    ))
+                    <UserEntry
+                      key={user._id}
+                      className="userEntry"
+                      id={user._id}
+                      name={user.name.firstName + " " + user.name.lastName}
+                      university={user.university}
+                      degree={user.degree}
+                      tags={user.tags.toString()}
+                    />
+                  ))
                   : console.log("loading users...")}
               </tbody>
             </table>
           </div>
+          </div>
         </div>
-      </div>
     );
   }
 }
