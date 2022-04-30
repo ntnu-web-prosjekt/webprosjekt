@@ -255,7 +255,7 @@ class RegistrationForm extends Component {
               rows="4"
               cols="60"
               onChange={this.handleChange}
-              placeholder="Type here..."
+              placeholder="Write relevant tags related to your academic knowledge..."
               required
             />
           </label>
