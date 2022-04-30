@@ -20,8 +20,8 @@ export default class catalogueEntry extends Component {
   render() {
     return (
       <tr>
-        <td>{`${this.props.data.startDate.getDate()}.${this.props.data.startDate.getMonth()}.${this.props.data.startDate.getFullYear()}`}</td>
-        <td>{`${this.props.data.endDate.getDate()}.${this.props.data.endDate.getMonth()}.${this.props.data.endDate.getFullYear()}`}</td>
+        <td>{`${this.props.data.startDate.split("T")[0].split("-")[2]}.${this.props.data.startDate.split("T")[0].split("-")[1]}.${this.props.data.startDate.split("T")[0].split("-")[0]}`}</td>
+        <td>{`${this.props.data.endDate.split("T")[0].split("-")[2]}.${this.props.data.endDate.split("T")[0].split("-")[1]}.${this.props.data.endDate.split("T")[0].split("-")[0]}`}</td>
         <td>{this.props.data.subjectName}</td>
         <td>
           <Link to={"/request/" + this.props.data._id}>View</Link>

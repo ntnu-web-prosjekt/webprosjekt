@@ -14,11 +14,11 @@ function GeneralInfo(props) {
                 <div className="gen-info__dates">
                     <div>
                         <span className="gen-info__title">Starts</span>
-                        <span className="gen-info__desc">{startDate.split("T")[0].replace(/-/g, "/")}</span>
+                        <span className="gen-info__desc">{startDate.split("T")[0].split("-")[2] + "." + startDate.split("T")[0].split("-")[1] + "." + startDate.split("T")[0].split("-")[0]}</span>
                     </div>
                     <div>
                         <span className="gen-info__title">Ends</span>
-                        <span className="gen-info__desc">{endDate.split("T")[0].replace(/-/g, "/")}</span>
+                        <span className="gen-info__desc">{endDate.split("T")[0].split("-")[2] + "." + endDate.split("T")[0].split("-")[1] + "." + endDate.split("T")[0].split("-")[0]}</span>
                     </div>
                 </div>
             </div>
