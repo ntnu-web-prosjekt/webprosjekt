@@ -9,8 +9,8 @@ async function data() {
       returnData.forEach((element) => {
         if (element["examinatorApproved"] !== null) return;
         var newEle = element;
-        newEle.startDate = new Date(element.startDate);
-        newEle.endDate = new Date(element.endDate);
+        //newEle.startDate = new Date(element.startDate);
+        //newEle.endDate = new Date(element.endDate);
         returnJson.push(newEle);
       });
 
