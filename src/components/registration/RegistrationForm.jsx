@@ -245,6 +245,9 @@ class RegistrationForm extends Component {
         <form onSubmit={this.registerSubmit}>
           <label>
             <p>Tags (separate by comma)</p>
+            <ul className="gen-tags__list">
+              {this.state.tags.map((tag, index) => <li key={index}>{tag}</li>)}
+            </ul>
             <textarea
               className="aInput"
               id="tags"
