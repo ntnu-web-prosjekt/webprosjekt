@@ -6,8 +6,10 @@ export default function PersonalDetails() {
   const [request, setRequest] = useState({});
 
   const updateRequest = (event) => {
+    const userData = JSON.parse(sessionStorage.getItem("token"));
+    request.id = userData._id;
     const API_HOST = process.env.REACT_APP_API_URL;
-    const req = `${API_HOST}/settings/update/data`;
+    const req = `${API_HOST}/myprofile/settings/update/data`;
     console.log(request);
     const fetchRequest = async () => {
       try {
