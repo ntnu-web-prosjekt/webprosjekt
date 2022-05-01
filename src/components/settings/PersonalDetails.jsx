@@ -5,27 +5,6 @@ export default function PersonalDetails() {
   const redirect = useNavigate();
   const [request, setRequest] = useState({});
 
-  // useEffect(() => {
-  //   const req = `${API_HOST}/settings`;
-  //   const fetchRequest = async () => {
-  //     try {
-  //       const response = await fetch(req, {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify(localStorage.getItem("token")),
-  //       });
-  //       const data = await response.json();
-  //       console.log(data);
-  //       setRequest(data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   fetchRequest();
-  // }, [params._id]);
-
   const updateRequest = (event) => {
     const API_HOST = process.env.REACT_APP_API_URL;
     const req = `${API_HOST}/settings/update/data`;
