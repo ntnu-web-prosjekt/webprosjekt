@@ -13,6 +13,8 @@ export default class ViewProfile extends Component {
     this.state = {
       user: {},
       id: window.location.pathname.split("/")[2],
+      notes: null,
+      loadingNote: true
     };
   }
 
@@ -25,9 +27,50 @@ export default class ViewProfile extends Component {
         this.setState({ user: data.userInfo });
         console.log(this.state.user);
       });
+
+      await fetch(
+        `${process.env.REACT_APP_API_URL}/finduser/review/${JSON.parse(sessionStorage.getItem("token"))._id}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const user = this.state.id;
+
+          if(data.notes[user]){
+          const note = data.notes[user];
+          this.setState({notes: note, loadingNote: false});
+          
+          } else {
+            this.setState({loadingNote: false});
+          }
+        });
   }
+
+  updateReview = (newText) => {
+    this.setState({notes: newText}, () => {
+      const body = {
+        userId: this.state.id,
+        ownerId: JSON.parse(sessionStorage.getItem("token"))._id,
+        reviewText: this.state.notes
+      }
+  
+      console.log(body);
+  
+      fetch(
+        `${process.env.REACT_APP_API_URL}/finduser/review/update`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body)
+        }).then((response) => response.json())
+        .then((data) => {
+          alert("The review is now saved")
+        });
+    });
+  }
+
   render() {
-    if (this.state.user.name) {
+    if (this.state.user.name && this.state.loadingNote == false ) {
       return (
         <div className="page">
             <Sidebar />
@@ -37,7 +80,7 @@ export default class ViewProfile extends Component {
             <Tags {...this.state.user} />
             <AboutMe {...this.state.user} />
             <PendingReq {...this.state.user} />
-            <MyReview {...this.state.user} />
+            <MyReview {...this.state.user} note={this.state.notes} onClick={this.updateReview}/>
             </div>
           </div>
         </div>
