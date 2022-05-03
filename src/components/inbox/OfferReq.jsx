@@ -39,7 +39,7 @@ class OfferReq extends React.Component {
                             {/* goes through  each request you own that people are offering to help */}
                             {this.state.inboxData.map((item,index) => 
                                     { return(
-                                        // for each person offering to help, displays 
+                                        // for each person offering to help, displays a row with the request info
                                         item.examinatorId.map((i, subindex) => {
                                             return (
                                                 <tr key={subindex}>
@@ -47,7 +47,7 @@ class OfferReq extends React.Component {
                                                     <td>{item.endDate}</td>
                                                     <td>{item.subjectName}</td>
                                                     <td>{i.split("::")[1]}</td>
-                                                    <td><RespondOffer offerId={item._id} /></td>
+                                                    <td><RespondOffer offerId={item._id} offerExaminatorId={i.split("::")[0]} /></td>
                                                 </tr>
                                             )                                        
                                         })
