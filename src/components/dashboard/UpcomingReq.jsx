@@ -3,7 +3,7 @@ import "./UpcomingPendingReq.scss";
 function UpcomingReq(props) {
 
   // Getting todays date in the format year/month/day (ex. 2022/04/21)
-  const todaysDate = new Date().toISOString().split("T")[0].replace(/-/g, "/");
+  const todaysDate = new Date().toISOString();
 
   return (
     <div className="examinaton">
@@ -12,9 +12,9 @@ function UpcomingReq(props) {
         <tbody>
           {props.data
             ? props.data.map((item, index) => {
-
+              
               // If todays date is "smaller" than the examination startDate, the exam will be shown
-              if(todaysDate >= item.startDate.split("T")[0].replace(/-/g, "/")) {
+              if(todaysDate <= item.startDate) {
                 return (
                   <tr key={item.subjectName + index}>
                     <th>{item.startDate.split("T")[0].split("-")[2] + "." + item.startDate.split("T")[0].split("-")[1] + "." + item.startDate.split("T")[0].split("-")[0]}</th>
