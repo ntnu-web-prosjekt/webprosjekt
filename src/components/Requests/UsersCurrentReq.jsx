@@ -55,8 +55,8 @@ class UsersCurrentReq extends React.Component {
                     <table className='request-table'>
                         <thead className='request-tablehead'>
                         <tr>
-                            <th>Start date</th>
-                            <th>End date</th>
+                            <th>Exam Date</th>
+                            <th>Grading Deadline</th>
                             <th>Subject</th>
                             <th>Second examiner</th>
                             <th></th>
@@ -66,8 +66,8 @@ class UsersCurrentReq extends React.Component {
                         <tbody>
                             {this.state.requests.map(request => (
                                 <tr key={request._id}>
-                                    <td>{request.startDate}</td>
-                                    <td>{request.endDate}</td>
+                                    <td>{request.startDate.split("T")[0].split("-")[2] + "." + request.startDate.split("T")[0].split("-")[1] + "." + request.startDate.split("T")[0].split("-")[0]}</td>
+                                    <td>{request.endDate.split("T")[0].split("-")[2] + "." + request.endDate.split("T")[0].split("-")[1] + "." + request.endDate.split("T")[0].split("-")[0]}</td>
                                     <td>{request.subjectName}</td>
                                     <td>None yet...</td>
                                     {/* Passes request id as a prop when trying to view request */}

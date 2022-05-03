@@ -3,6 +3,9 @@ import "./generalinfo.scss";
 import React from "react";
 
 function GeneralInfo(props) {
+    const startDate = `${props.request.startDate}`;
+    const endDate = `${props.request.endDate}`;
+
     return (
         <div className="general">
             <div className="gen-info">
@@ -10,16 +13,12 @@ function GeneralInfo(props) {
                 <span className="gen-info__desc">{props.request.subjectName}</span>
                 <div className="gen-info__dates">
                     <div>
-                        <span className="gen-info__title">Starts</span>
-                        <span className="gen-info__desc">{props.request.startDate}</span>
+                        <span className="gen-info__title">Exam Date</span>
+                        <span className="gen-info__desc">{startDate.split("T")[0].split("-")[2] + "." + startDate.split("T")[0].split("-")[1] + "." + startDate.split("T")[0].split("-")[0]}</span>
                     </div>
                     <div>
-                        <span className="gen-info__title">Ends</span>
-                        <span className="gen-info__desc">{props.request.endDate}</span>
-                    </div>
-                    <div>
-                        <span className="gen-info__title">Application deadline</span>
-                        <span className="gen-info__desc">01.05.22</span>
+                        <span className="gen-info__title">Grading Deadline</span>
+                        <span className="gen-info__desc">{endDate.split("T")[0].split("-")[2] + "." + endDate.split("T")[0].split("-")[1] + "." + endDate.split("T")[0].split("-")[0]}</span>
                     </div>
                 </div>
             </div>

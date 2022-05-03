@@ -10,7 +10,7 @@ function PendingReq(props) {
             ? props.data.map((item, index) => {
                 return (
                   <tr key={item.subjectName + index}>
-                    <th>{item.startDate.split("T")[0].replace(/-/g, "/")}</th>
+                    <th>{item.startDate.split("T")[0].split("-")[2] + "." + item.startDate.split("T")[0].split("-")[1] + "." + item.startDate.split("T")[0].split("-")[0]}</th>
                     <td>{item.subjectName}</td>
                   </tr>
                 );

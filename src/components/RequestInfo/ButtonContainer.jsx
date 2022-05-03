@@ -1,11 +1,11 @@
 import ApplyForReqButton from "./ApplyForReqButton";
 import ContactMeButton from "./ContactMeButton";
 
-function ButtonContainer() {
+function ButtonContainer(props) {
     return (
         <div className="button-container">
-            <ApplyForReqButton/>
-            <ContactMeButton/>
+            <ApplyForReqButton id={props.request._id}/>
+            <ContactMeButton email={props.request.email}/>
         </div>
     );
 }

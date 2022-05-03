@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./requesterprofile.scss";
 
-function RequesterProfile() {
+function RequesterProfile(props) {
   return (
     <div class="requester">
       <div class="requester__container">
@@ -11,10 +11,10 @@ function RequesterProfile() {
               Requested by
             </span>
             <span class="requester__container__profile__heading__text--big">
-              Jane Appleseed
+              {props.request.username}
             </span>
             <span class="requester__container__profile__heading__link">
-              <Link to="#">Visit profile</Link>
+              <Link to={`/users/${props.request.ownerId}`}>Visit profile</Link>
             </span>
           </h2>
           <img

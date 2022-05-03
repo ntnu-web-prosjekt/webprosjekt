@@ -17,7 +17,7 @@ function UpcomingReq(props) {
               if(todaysDate >= item.startDate.split("T")[0].replace(/-/g, "/")) {
                 return (
                   <tr key={item.subjectName + index}>
-                    <th>{item.startDate.split("T")[0].replace(/-/g, "/")}</th>
+                    <th>{item.startDate.split("T")[0].split("-")[2] + "." + item.startDate.split("T")[0].split("-")[1] + "." + item.startDate.split("T")[0].split("-")[0]}</th>
                     <td>{item.subjectName}</td>
                   </tr>
                 );

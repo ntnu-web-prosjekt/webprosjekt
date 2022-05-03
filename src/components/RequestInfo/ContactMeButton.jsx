@@ -1,10 +1,10 @@
 import "./button.scss";
 
-function ContactMeButton() {
+function ContactMeButton(props) {
     
     // Opens up users default e-mail program
     function startMail() {
-        const email = "name@domain.com"
+        const email = `${props.email}`
 
         window.location.href = `mailto:${email}`;
     }

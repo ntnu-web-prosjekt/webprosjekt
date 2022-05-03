@@ -23,17 +23,6 @@ function KeyInfo(props) {
           <img
             class="keyinfo__list__el__icon"
             src={
-              process.env.REACT_APP_BASE_URL +
-              "../img/request-icons/translate.svg"
-            }
-            alt="icon"
-          />
-          Language: <span className="keyinfo__list__el__sub">English</span>
-        </li>
-        <li className="keyinfo__list__el">
-          <img
-            class="keyinfo__list__el__icon"
-            src={
               process.env.REACT_APP_BASE_URL + "../img/request-icons/bank2.svg"
             }
             alt="icon"
