@@ -35,3 +35,18 @@
     }
   }
 }
+.form-group {
+  margin-bottom: 10px;
+  background-color: #171e2e;
+  padding: 20px;
+  border-radius: 10px;
+  width: fit-content;
+  .form-control {
+    background-color: #0b1622;
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem);
+    margin-bottom: 0.3rem;
+  }
+}
