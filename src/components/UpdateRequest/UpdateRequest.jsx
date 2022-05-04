@@ -14,8 +14,15 @@ function UpdateRequest() {
       try {
         const response = await fetch(req);
         const data = await response.json();
-        console.log(data);
+
+        // Checking if the user actually owns this request, or if the user is admin
+        if(data.ownerId !== JSON.parse(sessionStorage.getItem("token"))._id && JSON.parse(sessionStorage.getItem("token")).role !== 1){
+          alert("Access denied!");
+          redirect("/myRequests");
+        }
+
         setRequest(data);
+        
       } catch (error) {
         console.log(error);
       }
