@@ -23,6 +23,30 @@
   }
 }
 
+.search_button {
+  background: #3577FF;
+  color: $DarkTextColor;
+  width: 80px;
+  margin-left: 0.3rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.search_input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
 table {
   width: 100%;
   height: fit-content;
