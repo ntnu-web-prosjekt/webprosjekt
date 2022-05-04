@@ -8,7 +8,7 @@ function Inbox() {
     <div className="page requestsPage">
       <Sidebar />
       <div className="requests">
-        <HelpReq />
+        {/* <HelpReq /> */}
         <OfferReq />
       </div>
     </div>

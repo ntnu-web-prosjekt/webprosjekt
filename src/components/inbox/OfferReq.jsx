@@ -43,8 +43,8 @@ class OfferReq extends React.Component {
                                         item.examinatorId.map((i, subindex) => {
                                             return (
                                                 <tr key={subindex}>
-                                                    <td>{item.startDate}</td>
-                                                    <td>{item.endDate}</td>
+                                                    <td>{`${item.startDate.split("T")[0].split("-")[2]}.${item.startDate.split("T")[0].split("-")[1]}.${item.startDate.split("T")[0].split("-")[0]}`}</td>
+                                                    <td>{`${item.endDate.split("T")[0].split("-")[2]}.${item.endDate.split("T")[0].split("-")[1]}.${item.endDate.split("T")[0].split("-")[0]}`}</td>
                                                     <td>{item.subjectName}</td>
                                                     <td>{i.split("::")[1]}</td>
                                                     <td><RespondOffer offerId={item._id} offerExaminatorId={i.split("::")[0]} /></td>

@@ -9,12 +9,11 @@ class RespondOffer extends React.Component {
         };
     }
     handleAccept = () => {
-        console.log("accepted", this.props.offerId);
         const API_HOST = process.env.REACT_APP_API_URL;
         const url = `${API_HOST}/inbox/accept/offer`;
         const request = {
             requestId: this.props.offerId,
-            examinatorId: this.props.offerExaminerId
+            examinatorId: this.props.offerExaminatorId
         };
         fetch(url, {
             method: "PUT",
