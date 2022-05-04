@@ -20,7 +20,7 @@ import RequestInfo from "./components/RequestInfo";
 import About from "./components/About";
 import useToken from "./components/token/useToken";
 import RequestForm from "./components/NewRequest/RequestForm";
-import UpdateRequest from "./components/UpdateRequest/UpdateRequest";
+import UpdateRequest from "./components/UpdateRequest";
 import ViewProfile from "./components/ViewProfile";
 import PageNotFound from "./components/PageNotFound";
 import CreateRequest from "./components/CreateRequest";
