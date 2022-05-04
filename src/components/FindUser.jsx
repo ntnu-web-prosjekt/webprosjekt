@@ -1,6 +1,7 @@
 import Sidebar from "./Sidebar";
 import "../components/findUser/findUser.scss";
 import UserEntry from "../components/findUser/UserEntry";
+import "./findUser/findUser.scss";
 
 import React, { Component } from "react";
 
@@ -10,6 +11,9 @@ export default class FindUser extends Component {
     this.state = {
       users: [],
     };
+
+    this.inputRef = React.createRef();
+    this.updateUsersFromSearch = this.updateUsersFromSearch.bind(this);
   }
   async componentDidMount() {
     await fetch("https://exammatcher-server.herokuapp.com/finduser/view")
@@ -18,16 +22,37 @@ export default class FindUser extends Component {
         this.setState({ users: data });
       });
   }
+
+  updateUsersFromSearch() {
+    const user = this.inputRef.current.value;
+    let firstname = user.split(" ")[0];
+    let lastname = user.split(" ")[1];
+
+    if(firstname == "" || firstname == undefined){
+      firstname = "-"
+    }
+
+    if(lastname == "" || lastname == undefined){
+      lastname = "-"
+    }
+
+    fetch(`${process.env.REACT_APP_API_URL}/finduser/search/${firstname}/${lastname}`)
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({ users: data });
+      });
+  }
+
+
   render() {
     return (
-
-
-
       <div className="page">
         <Sidebar />
         <div className="pageContent dashboard">
           <h1>Find Users</h1>
           <div className="requests" id="usersTable">
+            <input className='search_input' ref={this.inputRef} type="text" defaultValue="" placeholder="Search for name..."/>
+            <button className='search_button' onClick={this.updateUsersFromSearch}>Search</button>
             <table>
               <thead>
                 <tr>
