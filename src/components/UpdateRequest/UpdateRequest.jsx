@@ -126,6 +126,8 @@ function UpdateRequest() {
     console.log(request),
     (
       <div className="requestForm">
+        <h1 style={{marginBottom: 30}}>Update request</h1>
+
         <form autoComplete="off" onSubmit={handleSubmit}>
           <h2 className="form-header">1. General info</h2>
 
@@ -269,7 +271,7 @@ function UpdateRequest() {
           <input
             className="publish-btn"
             type="submit"
-            value="Publish request"
+            value="Update request"
           />
           <input
             onClick={handleClick}

@@ -27,7 +27,7 @@ class RespondOffer extends React.Component {
                 console.log(data);
             }
         );
-        this.setState({redirect: true});
+        this.setState({refresh: true});
     };
 
     handleDecline = () => {
@@ -37,7 +37,10 @@ class RespondOffer extends React.Component {
     render() {
         const refresh = this.state.refresh;
         if (refresh) {
-            return <Navigate to="/myRequests" />;
+            //return <Navigate to="/myRequests" />;
+
+            // Reloading inbox to make the accepted/declined request go away
+            window.location.reload();
         }
         return (
             <div>
