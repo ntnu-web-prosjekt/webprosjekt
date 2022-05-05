@@ -21,6 +21,9 @@ function UpdateRequest() {
           redirect("/myRequests");
         }
 
+        data.startDate = new Date(data.startDate).toISOString().split('T')[0];
+        data.endDate = new Date(data.endDate).toISOString().split('T')[0];
+
         setRequest(data);
         
       } catch (error) {
@@ -84,7 +87,14 @@ function UpdateRequest() {
         setRequest({ ...request, subjectLevel: event.target.value });
         break;
       case "tags":
-        setRequest({ ...request, tags: event.target.value });
+        // Refers the whole string
+        const tags = event.target.value;
+
+        // Splitting string, and removes array elements which are empty
+        const tagsArray = tags.split(",").map(tag => tag.trim()).filter((tagWithoutEmptySpace) => tagWithoutEmptySpace);
+
+        // Setting the state
+        setRequest({ ...request, tags: tagsArray });
         break;
       case "desc":
         setRequest({ ...request, description: event.target.value });
@@ -165,35 +175,36 @@ function UpdateRequest() {
             name="slevel"
             id="slevel"
             onChange={handleChange}
-            defaultValue={request.subjectLevel}
+            value={request.subjectLevel}
+            defaultValue={"default"}
             required
           >
             <option value="DEFAULT" disabled>
               Choose one...
             </option>
-            <option value="bachelor">Bachelor</option>
+            <option value="Bachelor">Bachelor</option>
             <option value="Master">Master</option>
-            <option value="phd">Ph.d.</option>
-            <option value="one-year">One-year programme</option>
+            <option value="Ph.d.">Ph.d.</option>
+            <option value="One-year programme">One-year programme</option>
           </select>
 
           <label htmlFor="tags">Tags*</label>
           <span className="info">Separate the tags by using comma.</span>
 
-          {/*                  {request.tags != null ? 
-                <div className="gen-tags">
-                    <ul className="gen-tags__list">
-                        {request.tags.map((tag, index) => <li key={index}>{tag}</li>)}
-                    </ul>
-                </div> 
-                : false}  */}
+          {request.tags 
+          ? 
+            <ul className="gen-tags__list">
+              {request.tags.map((tag, index) => <li key={index}>{tag}</li>)}
+            </ul>
+          : 
+          false}
           <textarea
             id="tags"
             name="tags"
             rows="4"
             cols="30"
             onChange={handleChange}
-            value={request.tags}
+            defaultValue={request.tags}
             required
           />
 
@@ -218,7 +229,7 @@ function UpdateRequest() {
               id="startd"
               name="startd"
               onChange={handleChange}
-              value={request.startDate}
+              defaultValue={request.startDate}
               required
             />
           </div>
@@ -230,7 +241,7 @@ function UpdateRequest() {
               id="endd"
               name="endd"
               onChange={handleChange}
-              value={request.endDate}
+              defaultValue={request.endDate}
               required
             />
           </div>
@@ -249,7 +260,7 @@ function UpdateRequest() {
             required
           />
 
-          <label htmlFor="rlevel">Subject level*</label>
+          <label htmlFor="rlevel">Examinator level*</label>
           <span className="info">
             Which education level does the second examinator need to possess?
           </span>
@@ -257,15 +268,16 @@ function UpdateRequest() {
             name="rlevel"
             id="rlevel"
             onChange={handleChange}
-            defaultValue={`${request.examinatorLevel}`}
+            value={request.examinatorLevel}
+            defaultValue={"default"}
             required
           >
             <option value="DEFAULT" disabled>
               Choose one...
             </option>
-            <option value="bachelor">Bachelor</option>
-            <option value="master">Master</option>
-            <option value="phd">Ph.d.</option>
+            <option value="Bachelor">Bachelor</option>
+            <option value="Master">Master</option>
+            <option value="Ph.d.">Ph.d.</option>
           </select>
 
           <input
